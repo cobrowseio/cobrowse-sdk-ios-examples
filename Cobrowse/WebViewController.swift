@@ -13,11 +13,12 @@ class WebViewController: UIViewController {
     @IBOutlet weak var webView: WKWebView!
 
     var url: URL?
+    private var bag = Set<AnyCancellable>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        SheetPresentationDelegate.subscribe(for: sessionButton)
+        SheetPresentationDelegate.subscribe(for: sessionButton, store: &bag)
         
         webView.navigationDelegate = self
         

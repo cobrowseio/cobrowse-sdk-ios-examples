@@ -15,6 +15,8 @@ class TransactionTableViewController: UITableViewController {
     /// Displayed cells are stored so parts of them can be redacted when needed.
     var displayedCells = Set<TransactionTableViewCell>()
     
+    private var bag = Set<AnyCancellable>()
+    
     var transactions: [Date: [Transaction]] = [:] {
         didSet {
             displayedCells.removeAll()
@@ -25,7 +27,7 @@ class TransactionTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        SheetPresentationDelegate.subscribe(for: sessionButton)
+        SheetPresentationDelegate.subscribe(for: sessionButton, store: &bag)
         subscribeToTransactions() 
     }
 

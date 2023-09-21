@@ -15,6 +15,8 @@ class ChartViewController: UIViewController {
     @IBOutlet weak var chartView: PieChartView!
     @IBOutlet weak var spentLabel: UILabel!
     
+    private var bag = Set<AnyCancellable>()
+    
     var recentTransactions: [Transaction] = [] {
         didSet {
             spentLabel.text = recentTransactions.totalSpent.currencyString
@@ -63,7 +65,9 @@ extension ChartViewController {
     
     private func subscribeToSession() {
         session.$current
-            .sink { [self] session in
+            .sink { [weak self] session in
+                guard let self = self else { return }
+                
                 let isActive = session?.isActive() ?? false
                 sessionButton.isHidden = !isActive
             }
@@ -72,7 +76,9 @@ extension ChartViewController {
     
     private func subscribeToTransactions() {
         account.$transactions
-            .sink { [self] transactions in
+            .sink { [weak self] transactions in
+                guard let self = self else { return }
+                
                 recentTransactions = transactions.recentTrnsactions
             }
             .store(in: &bag)
@@ -81,11 +87,15 @@ extension ChartViewController {
     private func subscribeToSignedInState() {
         account.$isSignedIn
             .dropFirst(1)
-            .sink { [self] isSignedIn in
+            .sink { [weak self] isSignedIn in
+                guard let self = self else { return }
+                
                 if isSignedIn {
                     dismiss(animated: true) {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                            UIView.animate(withDuration: 0.25) { [self] in
+                            UIView.animate(withDuration: 0.25) { [weak self] in
+                                guard let self = self else { return }
+                                
                                 chartView.alpha = 1.0
                             }
                         }
