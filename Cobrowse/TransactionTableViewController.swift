@@ -4,6 +4,8 @@
 //
 
 import UIKit
+import Combine
+
 import CobrowseIO
 
 class TransactionTableViewController: UITableViewController {
