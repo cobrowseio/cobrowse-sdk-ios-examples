@@ -56,7 +56,6 @@ extension Array where Element == CodeTextField {
         
         clear()
         enable()
-        first?.becomeFirstResponder()
     }
     
     func clear() {
@@ -68,6 +67,10 @@ extension Array where Element == CodeTextField {
     }
     
     func disable() {
-        forEach { $0.isEnabled = false }
+        
+        forEach {
+            $0.resignFirstResponder()
+            $0.isEnabled = false
+        }
     }
 }

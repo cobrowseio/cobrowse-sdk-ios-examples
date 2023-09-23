@@ -24,15 +24,17 @@ class AgentPresentViewController: UIViewController {
         
         super.viewDidLoad()
         
-        subscribeToSession()
+        imageView.isHidden = true
+        sessionButton.isHidden = true
+        
         setupCodeInput()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
         super.viewDidAppear(animated)
-        
-        codeTextFields.first?.becomeFirstResponder()
+
+        subscribeToSession()
     }
     
     @IBAction func sessionButtonWasTapped(_ sender: Any) {
@@ -111,6 +113,7 @@ extension AgentPresentViewController {
                 guard let self = self else { return }
                 
                 codeTextFields.reset()
+                codeTextFields.first?.becomeFirstResponder()
             }
         }
     }
@@ -132,6 +135,10 @@ extension AgentPresentViewController {
 
             if session == nil || isActive {
                 codeTextFields.reset()
+            }
+                
+            if session == nil || !isActive {
+                codeTextFields.first?.becomeFirstResponder()
             }
 
             label.text = isActive ? "You are now presenting" : "Please enter your present code"
