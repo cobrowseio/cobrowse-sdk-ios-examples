@@ -100,7 +100,9 @@ extension AgentPresentViewController {
         
         codeTextFields.disable()
 
-        CobrowseIO.instance().getSession(codeTextFields.code) { [weak self] error, _ in
+        CobrowseIO.instance().getSession(codeTextFields.code) { [weak self] error, session in
+            
+            session?.setCapabilities([])
             
             guard
                 let self = self,
