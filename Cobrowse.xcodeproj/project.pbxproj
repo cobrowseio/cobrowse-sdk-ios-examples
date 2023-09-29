@@ -75,8 +75,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4A0C5ECB2ABDD226002B4F5E /* CobrowseIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CobrowseIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A0C5ECF2ABDD22B002B4F5E /* CobrowseIOAppExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CobrowseIOAppExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A0C5ED32ABDF8B9002B4F5E /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		4A0C5ED52ABDF8EB002B4F5E /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		4A1D46F629FAA95C00109053 /* UISheetPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISheetPresentationController.swift; sourceTree = "<group>"; };
@@ -220,8 +218,6 @@
 		4AC7E51A29F94CEF00722B29 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4A0C5ECF2ABDD22B002B4F5E /* CobrowseIOAppExtension.framework */,
-				4A0C5ECB2ABDD226002B4F5E /* CobrowseIO.framework */,
 				4AC7E51B29F94CEF00722B29 /* ReplayKit.framework */,
 			);
 			name = Frameworks;
