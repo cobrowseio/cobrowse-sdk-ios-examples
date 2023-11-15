@@ -36,6 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         cobrowse.start()
         
+        application.registerForRemoteNotifications()
+        
         return true
     }
     
