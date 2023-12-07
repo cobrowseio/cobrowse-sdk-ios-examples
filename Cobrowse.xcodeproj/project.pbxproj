@@ -40,8 +40,6 @@
 		4A81871A2ABDFD5A00C90B9E /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8187192ABDFD5A00C90B9E /* DispatchQueue.swift */; };
 		4A90DD342ABC632200152802 /* AgentPresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90DD332ABC632200152802 /* AgentPresentViewController.swift */; };
 		4A90DD382ABC78AD00152802 /* CodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90DD372ABC78AD00152802 /* CodeTextField.swift */; };
-		4AAD48E62B20A5EB007F3A45 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD48E52B20A5EB007F3A45 /* UIWindow.swift */; };
-		4AAD48E82B20A741007F3A45 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD48E72B20A741007F3A45 /* UINavigationController.swift */; };
 		4AAD48F22B221F49007F3A45 /* CobrowseIO in Frameworks */ = {isa = PBXBuildFile; productRef = 4AAD48F12B221F49007F3A45 /* CobrowseIO */; };
 		4AAD48F42B221F50007F3A45 /* CobrowseIOAppExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 4AAD48F32B221F50007F3A45 /* CobrowseIOAppExtension */; };
 		4AAD48F62B221F5B007F3A45 /* CobrowseIO in Frameworks */ = {isa = PBXBuildFile; productRef = 4AAD48F52B221F5B007F3A45 /* CobrowseIO */; };
@@ -139,8 +137,6 @@
 		4A8187192ABDFD5A00C90B9E /* DispatchQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
 		4A90DD332ABC632200152802 /* AgentPresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentPresentViewController.swift; sourceTree = "<group>"; };
 		4A90DD372ABC78AD00152802 /* CodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextField.swift; sourceTree = "<group>"; };
-		4AAD48E52B20A5EB007F3A45 /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
-		4AAD48E72B20A741007F3A45 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		4AC0135F29E5989000461FA9 /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
 		4AC0136129E59DBF00461FA9 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		4AC0136529E5B35F00461FA9 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
@@ -211,14 +207,12 @@
 				4A1D47232A03C0E800109053 /* Locale.Currency.swift */,
 				4A1D471F2A03BFBF00109053 /* Publisher.swift */,
 				4A1D470529FAB1DD00109053 /* RawRepresentable.swift */,
-				4AAD48E72B20A741007F3A45 /* UINavigationController.swift */,
 				4A1D46F629FAA95C00109053 /* UISheetPresentationController.swift */,
 				4A1D470729FAB4AD00109053 /* UIStoryboard.swift */,
 				4A1D470929FAB82300109053 /* UITableView.swift */,
 				4A1D47212A03BFDF00109053 /* UITextField.swift */,
 				4A0C5ED32ABDF8B9002B4F5E /* UIView.swift */,
 				4A1D46F829FAA98500109053 /* UIViewController.swift */,
-				4AAD48E52B20A5EB007F3A45 /* UIWindow.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -594,7 +588,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AAD48E62B20A5EB007F3A45 /* UIWindow.swift in Sources */,
 				4A1D46F929FAA98500109053 /* UIViewController.swift in Sources */,
 				4A1D46FB29FAA9A600109053 /* Date.swift in Sources */,
 				4A1D47222A03BFDF00109053 /* UITextField.swift in Sources */,
@@ -603,7 +596,6 @@
 				4AC0136229E59DBF00461FA9 /* Transaction.swift in Sources */,
 				4A5AFEA929EEAB75007CABEB /* WebViewController.swift in Sources */,
 				4A5AFEAB29F16507007CABEB /* AccountViewController.swift in Sources */,
-				4AAD48E82B20A741007F3A45 /* UINavigationController.swift in Sources */,
 				4AEEDB3B29DF0743009B7208 /* ChartViewController.swift in Sources */,
 				4AC0136629E5B35F00461FA9 /* Formatters.swift in Sources */,
 				4AEEDB3729DF0743009B7208 /* AppDelegate.swift in Sources */,
