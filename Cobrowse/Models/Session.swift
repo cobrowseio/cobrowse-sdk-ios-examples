@@ -7,9 +7,12 @@ import Foundation
 
 import CobrowseIO
 
-class Session: NSObject, CobrowseIODelegate {
+class Session: NSObject, ObservableObject, CobrowseIODelegate {
     
     @Published var current: CBIOSession?
+    
+    @UserDefault(key: "isRedactionByDefaultEnabled", defaultValue: false)
+    var isRedactionByDefaultEnabled: Bool
     
     func cobrowseSessionDidUpdate(_ session: CBIOSession) {
         current = session

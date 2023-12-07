@@ -7,6 +7,7 @@ import UIKit
 
 import CobrowseIO
 
+let account = Account()
 let session = Session()
 
 @main
@@ -18,10 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let cobrowse = CobrowseIO.instance()
         
-        cobrowse.license = "trial"
+        cobrowse.license = "tG4g9cexebTjGw"
         
         cobrowse.customData = [
-            kCBIOUserEmailKey: "ios@demo.com",
+            kCBIOUserEmailKey: "ios@example.com",
             kCBIODeviceNameKey: "iOS Demo"
         ] as [String : NSObject]
         
