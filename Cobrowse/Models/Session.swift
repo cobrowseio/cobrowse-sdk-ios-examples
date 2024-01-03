@@ -7,7 +7,7 @@ import Foundation
 
 import CobrowseIO
 
-class Session: NSObject, CobrowseIODelegate {
+class Session: NSObject, ObservableObject, CobrowseIODelegate {
     
     @Published var current: CBIOSession?
     
@@ -20,14 +20,5 @@ class Session: NSObject, CobrowseIODelegate {
     
     func cobrowseSessionDidEnd(_ session: CBIOSession) {
         current = nil
-    }
-    
-    func cobrowseRedactedViews(for vc: UIViewController) -> [UIView] {
-        
-        guard isRedactionByDefaultEnabled,
-              let keyWindow = UIWindow.keyWindow
-            else { return [] }
-        
-        return keyWindow.rootViews
     }
 }

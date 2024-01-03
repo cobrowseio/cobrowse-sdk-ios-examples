@@ -6,9 +6,7 @@
 import Combine
 import Foundation
 
-let account = Account()
-
-class Account {
+class Account: ObservableObject {
     
     let total = 2495.34
     
