@@ -6,7 +6,7 @@
 import SwiftUI
 import CobrowseIO
 
-struct ContentView: View {
+struct TestingView: View {
 
     @State private var text = "Redacted text"
     @State private var username = ""
@@ -41,7 +41,7 @@ struct ContentView: View {
                 .buttonStyle(.borderedProminent)
 //                .redacted()
                 
-                NavigationLink(destination: ContentView()) {
+                NavigationLink(destination: TestingView()) {
                     Text("Navigation link")
                 }
                 
@@ -81,5 +81,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    TestingView()
 }
