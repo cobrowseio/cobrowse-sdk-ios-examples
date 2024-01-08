@@ -13,6 +13,8 @@ extension Transaction {
         
         @EnvironmentObject private var transactionDetent: Transaction.Detent.State
         
+        @EnvironmentObject private var navigation: Navigation
+        
         private let transaction: Transaction
         
         private var url: URL {
@@ -31,7 +33,7 @@ extension Transaction {
         var body: some View {
             WebView(url: url)
                 .onNavigation { url in
-                    print(url)
+                    navigation.path.append(url)
                 }
                 .navigationTitle("Transaction")
                 .navigationBarTitleDisplayMode(.inline)
@@ -42,6 +44,18 @@ extension Transaction {
                                 label: { Image(systemName: "rectangle.badge.xmark") }
                         }
                     }
+                }
+                .navigationDestination(for: URL.self) { url in
+                    WebView(url: url)
+                        .navigationTitle("Transaction")
+                        .toolbar {
+                            if let session = session.current, session.isActive(), transactionDetent.is(.large) {
+                                ToolbarItem(placement: .topBarTrailing) {
+                                    Button { session.end() }
+                                        label: { Image(systemName: "rectangle.badge.xmark") }
+                                }
+                            }
+                        }
                 }
         }
         

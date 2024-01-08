@@ -22,25 +22,26 @@ extension Transaction {
         }
         
         var body: some View {
-            NavigationStack {
-                SwiftUI.List {
-                    ForEach(transactionsByMonth, id: \.key) { (date, transactions) in
-                        Section(header: Text(date.string!)) {
-                            ForEach(transactions) { transaction in
-                                Item(for: transaction)
-                            }
+            SwiftUI.List {
+                ForEach(transactionsByMonth, id: \.key) { (date, transactions) in
+                    Section(header: Text(date.string!)) {
+                        ForEach(transactions) { transaction in
+                            Item(for: transaction)
                         }
                     }
                 }
-                .listStyle(.plain)
-                .navigationTitle("Transactions")
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    if let session = session.current, session.isActive(), transactionDetent.is(.large) {
-                        ToolbarItem(placement: .topBarTrailing) {
-                            Button { session.end() }
-                                label: { Image(systemName: "rectangle.badge.xmark") }
-                        }
+            }
+            .listStyle(.plain)
+            .navigationTitle("Transactions")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationDestination(for: Transaction.self, destination: { transaction in
+                Transaction.Detail(for: transaction)
+            })
+            .toolbar {
+                if let session = session.current, session.isActive(), transactionDetent.is(.large) {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button { session.end() }
+                            label: { Image(systemName: "rectangle.badge.xmark") }
                     }
                 }
             }

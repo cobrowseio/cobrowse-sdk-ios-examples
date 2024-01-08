@@ -12,18 +12,23 @@ struct WebView: UIViewRepresentable {
     var onNavigation: ((URL) -> Void) = { _ in }
     
     private let webView = WKWebView()
-    private let delegate = Delegate()
     
     func makeUIView(context: Context) -> WKWebView {
-        webView.navigationDelegate = delegate
+        
+        webView.load(URLRequest(url: url))
         
         return webView
     }
     
     func updateUIView(_ uiView: WKWebView, context: Context) {
+        let delegate = context.coordinator
         delegate.onNavigation = onNavigation
         
-        webView.load(URLRequest(url: url))
+        webView.navigationDelegate = delegate
+    }
+    
+    func makeCoordinator() -> Delegate {
+         Delegate()
     }
 }
 

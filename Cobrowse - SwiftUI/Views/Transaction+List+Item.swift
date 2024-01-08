@@ -11,7 +11,7 @@ extension Transaction.List {
         private let transaction: Transaction
         
         var body: some View {
-            NavigationLink(destination: Transaction.Detail(for: transaction)) {
+            NavigationLink(value: transaction) {
                 HStack {
                     transaction.category.icon
                         .resizable()

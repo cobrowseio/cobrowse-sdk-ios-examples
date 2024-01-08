@@ -12,10 +12,12 @@ struct Dashboard: View {
     @State var shouldPresentAccountSheet = false
     
     @State var shouldPresentTransactionsSheet: Bool
-    @State private var tansactionDetent = Transaction.Detent.State(.collapsed)
+    @State private var transactionDetent = Transaction.Detent.State(.collapsed)
     
     @EnvironmentObject private var account: Account
     @EnvironmentObject private var session: Session
+    
+    @ObservedObject var navigation = Navigation()
     
     private let offset = 65.0
     
@@ -42,17 +44,19 @@ struct Dashboard: View {
                     if shouldPresentTransactionsSheet {
                         Color.Cobrowse.background
                             .sheet(isPresented: $shouldPresentTransactionsSheet) {
-                                Transaction.List(transactions: account.transactions)
-                                    .presentationDetents([.fraction(0.40), .large])
-                                    .presentationBackgroundInteraction(.enabled(upThrough: .fraction(0.40)))
-                                    .interactiveDismissDisabled()
-                                    .onHeightChange { height in
-                                        let fractionHeight = (geometry.size.height - offset) * 0.9
-                                        tansactionDetent.current = height > fractionHeight ? .large : .fraction
-                                    }
-                                    .sheet(isPresented: $shouldPresentAccountSheet) {
-                                        AccountView(isPresented: $shouldPresentAccountSheet)
-                                    }
+                                NavigationStack(path: $navigation.path) {
+                                    Transaction.List(transactions: account.transactions)
+                                }
+                                .presentationDetents([.fraction(0.40), .large])
+                                .presentationBackgroundInteraction(.enabled(upThrough: .fraction(0.40)))
+                                .interactiveDismissDisabled()
+                                .onHeightChange { height in
+                                    let fractionHeight = (geometry.size.height - offset) * 0.9
+                                    transactionDetent.current = height > fractionHeight ? .large : .fraction
+                                }
+                                .sheet(isPresented: $shouldPresentAccountSheet) {
+                                    AccountView(isPresented: $shouldPresentAccountSheet)
+                                }
                             }
                     } else {
                         Color.Cobrowse.background
@@ -80,7 +84,8 @@ struct Dashboard: View {
                     label: { Image(systemName: "person.crop.circle") }
             }
         }
-        .environmentObject(tansactionDetent)
+        .environmentObject(navigation)
+        .environmentObject(transactionDetent)
     }
 }
 

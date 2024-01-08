@@ -5,7 +5,7 @@
 
 import UIKit
 
-struct Transaction: Identifiable {
+struct Transaction: Identifiable, Hashable {
     
     let id = UUID()
     let title: String
