@@ -64,19 +64,13 @@ struct AgentPresentView: View {
             .background { Color.Cobrowse.background.ignoresSafeArea() }
             .navigationTitle("Agent Present")
             .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                if let session = session.current, session.isActive() {
-                    ToolbarItem(placement: .topBarTrailing) {
-                        Button { session.end() }
-                    label: { Image(systemName: "rectangle.badge.xmark") }
-                    }
-                }
-                
+            .toolbar {                
                 ToolbarItem(placement: .topBarTrailing) {
                     Button { isPresented = false }
                 label: { Image(systemName: "xmark") }
                 }
             }
+            .sessionToolbar()
         }
     }
 }

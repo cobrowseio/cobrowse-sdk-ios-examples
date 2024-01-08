@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SignIn: View {
     
-    @EnvironmentObject private var session: Session
     @EnvironmentObject private var account: Account
     
     @State var username = ""
@@ -80,14 +79,7 @@ struct SignIn: View {
             }
             .ignoresSafeArea()
         }
-        .toolbar {
-            if let session = session.current, session.isActive() {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button { session.end() }
-                        label: { Image(systemName: "rectangle.badge.xmark") }
-                }
-            }
-        }
+        .sessionToolbar()
     }
     
     func signIn() {

@@ -15,7 +15,6 @@ struct Dashboard: View {
     @State private var transactionDetent = Transaction.Detent.State(.collapsed)
     
     @EnvironmentObject private var account: Account
-    @EnvironmentObject private var session: Session
     
     @ObservedObject var navigation = Navigation()
     
@@ -72,18 +71,12 @@ struct Dashboard: View {
             .ignoresSafeArea()
         }
         .toolbar {
-            if let session = session.current, session.isActive() {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button { session.end() }
-                        label: { Image(systemName: "rectangle.badge.xmark") }
-                }
-            }
-            
             ToolbarItem(placement: .topBarTrailing) {
                 Button { shouldPresentAccountSheet = true }
                     label: { Image(systemName: "person.crop.circle") }
             }
         }
+        .sessionToolbar()
         .environmentObject(navigation)
         .environmentObject(transactionDetent)
     }

@@ -10,9 +10,6 @@ extension Transaction {
     struct List: View {
         
         @EnvironmentObject private var account: Account
-        @EnvironmentObject private var session: Session
-        
-        @EnvironmentObject private var transactionDetent: Transaction.Detent.State
         
         private let transactions: [Transaction]
         
@@ -37,14 +34,7 @@ extension Transaction {
             .navigationDestination(for: Transaction.self, destination: { transaction in
                 Transaction.Detail(for: transaction)
             })
-            .toolbar {
-                if let session = session.current, session.isActive(), transactionDetent.is(.large) {
-                    ToolbarItem(placement: .topBarTrailing) {
-                        Button { session.end() }
-                            label: { Image(systemName: "rectangle.badge.xmark") }
-                    }
-                }
-            }
+            .sessionToolbar(trackDetent: true)
         }
         
         init(transactions: [Transaction]) {

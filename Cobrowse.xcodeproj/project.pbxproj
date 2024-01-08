@@ -47,6 +47,7 @@
 		4A9632CF2B4C3F3200535007 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9632CE2B4C3F3200535007 /* Navigation.swift */; };
 		4A9632D32B4C406F00535007 /* CobrowseIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9632D22B4C406F00535007 /* CobrowseIO.framework */; };
 		4A9632D42B4C406F00535007 /* CobrowseIO.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9632D22B4C406F00535007 /* CobrowseIO.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4A9632D72B4C602300535007 /* SessionToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9632D62B4C602300535007 /* SessionToolBar.swift */; };
 		4A976D752B319CAF00D225E8 /* CobrowseIO in Frameworks */ = {isa = PBXBuildFile; productRef = 4A976D742B319CAF00D225E8 /* CobrowseIO */; };
 		4A976D7F2B3C7F2400D225E8 /* Transaction+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A976D7E2B3C7F2400D225E8 /* Transaction+UIKit.swift */; };
 		4A976D822B3C7FE500D225E8 /* Transaction+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A976D802B3C7F9600D225E8 /* Transaction+SwiftUI.swift */; };
@@ -187,6 +188,7 @@
 		4A90DD372ABC78AD00152802 /* CodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextField.swift; sourceTree = "<group>"; };
 		4A9632CE2B4C3F3200535007 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		4A9632D22B4C406F00535007 /* CobrowseIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CobrowseIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A9632D62B4C602300535007 /* SessionToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionToolBar.swift; sourceTree = "<group>"; };
 		4A976D692B30E73800D225E8 /* CobrowseIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CobrowseIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A976D6D2B31993900D225E8 /* CobrowseIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CobrowseIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A976D7E2B3C7F2400D225E8 /* Transaction+UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+UIKit.swift"; sourceTree = "<group>"; };
@@ -386,6 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				4A976DBD2B45B52200D225E8 /* OnHeightChange.swift */,
+				4A9632D62B4C602300535007 /* SessionToolBar.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -718,6 +721,7 @@
 				4A976DA92B45B37900D225E8 /* Transaction+Detent.swift in Sources */,
 				4A976D832B3C7FEE00D225E8 /* Transaction.swift in Sources */,
 				4A976DB72B45B4B800D225E8 /* AgentPresentView.swift in Sources */,
+				4A9632D72B4C602300535007 /* SessionToolBar.swift in Sources */,
 				4A9632CF2B4C3F3200535007 /* Navigation.swift in Sources */,
 				4A976DB52B45B49F00D225E8 /* AccountView.swift in Sources */,
 				4A976DB92B45B4DA00D225E8 /* CodeInput.swift in Sources */,

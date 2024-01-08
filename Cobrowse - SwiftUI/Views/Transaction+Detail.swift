@@ -9,10 +9,6 @@ extension Transaction {
     
     struct Detail: View {
         
-        @EnvironmentObject private var session: Session
-        
-        @EnvironmentObject private var transactionDetent: Transaction.Detent.State
-        
         @EnvironmentObject private var navigation: Navigation
         
         private let transaction: Transaction
@@ -37,25 +33,11 @@ extension Transaction {
                 }
                 .navigationTitle("Transaction")
                 .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    if let session = session.current, session.isActive(), transactionDetent.is(.large) {
-                        ToolbarItem(placement: .topBarTrailing) {
-                            Button { session.end() }
-                                label: { Image(systemName: "rectangle.badge.xmark") }
-                        }
-                    }
-                }
+                .sessionToolbar()
                 .navigationDestination(for: URL.self) { url in
                     WebView(url: url)
                         .navigationTitle("Transaction")
-                        .toolbar {
-                            if let session = session.current, session.isActive(), transactionDetent.is(.large) {
-                                ToolbarItem(placement: .topBarTrailing) {
-                                    Button { session.end() }
-                                        label: { Image(systemName: "rectangle.badge.xmark") }
-                                }
-                            }
-                        }
+                        .sessionToolbar()
                 }
         }
         

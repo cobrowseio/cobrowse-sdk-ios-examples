@@ -77,18 +77,12 @@ struct AccountView: View {
             .navigationTitle("Account")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                if let session = session.current, session.isActive() {
-                    ToolbarItem(placement: .topBarTrailing) {
-                        Button { session.end() }
-                            label: { Image(systemName: "rectangle.badge.xmark") }
-                    }
-                }
-                
                 ToolbarItem(placement: .topBarTrailing) {
                     Button { isPresented = false }
                         label: { Image(systemName: "xmark") }
                 }
             }
+            .sessionToolbar()
         }
         .onDisappear {
             guard let current = session.current, !current.isActive()

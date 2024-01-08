@@ -24,3 +24,15 @@ extension Transaction.Detent {
         }
     }
 }
+
+extension Transaction.Detent.State: Equatable {
+    
+    static func == (lhs: Transaction.Detent.State, rhs: Transaction.Detent.State) -> Bool {
+        switch (lhs.current, rhs.current) {
+            case (.collapsed, .collapsed),
+                 (.fraction, .fraction),
+                 (.large, .large): return true
+            default: return false
+        }
+    }
+}
