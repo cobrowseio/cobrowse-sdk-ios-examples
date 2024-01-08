@@ -96,7 +96,7 @@ extension ChartViewController {
             .sink { [weak self] transactions in
                 guard let self = self else { return }
                 
-                recentTransactions = transactions.recentTrnsactions
+                recentTransactions = transactions.recentTransactions
             }
             .store(in: &bag)
     }
