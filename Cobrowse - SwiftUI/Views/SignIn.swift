@@ -2,8 +2,6 @@
 //  SignIn.swift
 //  Cobrowse - SwiftUI
 //
-//  Created by Ste Prescott on 03/01/2024.
-//
 
 import SwiftUI
 
@@ -11,8 +9,8 @@ struct SignIn: View {
     
     @EnvironmentObject private var account: Account
     
-    @State var username = ""
-    @State var password = ""
+    @State private var username = ""
+    @State private var password = ""
     
     @FocusState private var focusField: Field?
     
@@ -28,7 +26,7 @@ struct SignIn: View {
         NavigationStack {
             VStack {
                 Spacer()
-                    .frame(height:140)
+                    .frame(height:40)
                 
                 if let icon = Locale.current.currency?.icon {
                     icon
@@ -73,16 +71,13 @@ struct SignIn: View {
                 
                 Spacer()
             }
-            .background {
-                Color.Cobrowse.background
-                    .ignoresSafeArea()
-            }
-            .ignoresSafeArea()
+            .background { Color.Cobrowse.background.ignoresSafeArea() }
+            .sessionToolbar()
         }
-        .sessionToolbar()
+
     }
     
-    func signIn() {
+    private func signIn() {
         focusField = invalidField
         
         guard invalidField == nil
@@ -95,7 +90,6 @@ struct SignIn: View {
 extension SignIn {
     
     enum Field {
-        case username
-        case password
+        case username, password
     }
 }

@@ -8,7 +8,7 @@ import Foundation
 
 class Account: ObservableObject {
     
-    let total = 2495.34
+    let balance = 2495.34
     
     @Published var isSignedIn = false
     @Published var transactions: [Transaction] = []

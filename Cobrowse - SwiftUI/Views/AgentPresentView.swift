@@ -17,7 +17,6 @@ struct AgentPresentView: View {
     @State var shouldShake = false
     
     var body: some View {
-        NavigationStack {
             VStack(spacing: 16) {
                 if let session = session.current, session.isActive() {
                     Text("You are now presenting")
@@ -30,7 +29,6 @@ struct AgentPresentView: View {
                         
                     
                     Color.Cobrowse.background
-                } else {
                     VStack(spacing: 16) {
                         Text("Please enter your present code")
                             .font(.title2)
@@ -72,5 +70,4 @@ struct AgentPresentView: View {
             }
             .sessionToolbar()
         }
-    }
 }

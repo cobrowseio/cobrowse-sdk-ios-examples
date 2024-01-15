@@ -2,8 +2,6 @@
 //  SessionToolBar.swift
 //  Cobrowse - SwiftUI
 //
-//  Created by Ste Prescott on 08/01/2024.
-//
 
 import SwiftUI
 

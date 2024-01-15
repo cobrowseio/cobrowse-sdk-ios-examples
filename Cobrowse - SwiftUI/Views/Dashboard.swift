@@ -4,19 +4,17 @@
 //
 
 import SwiftUI
-import Charts
-import CobrowseIO
 
 struct Dashboard: View {
-    
-    @State var shouldPresentAccountSheet = false
     
     @State var shouldPresentTransactionsSheet: Bool
     @State private var transactionDetent = Transaction.Detent.State(.collapsed)
     
+    @State private var isPresentingAccountSheet = false
+    
     @EnvironmentObject private var account: Account
     
-    @ObservedObject var navigation = Navigation()
+    @ObservedObject private var navigation = Navigation()
     
     private let offset = 65.0
     
@@ -53,14 +51,14 @@ struct Dashboard: View {
                                     let fractionHeight = (geometry.size.height - offset) * 0.9
                                     transactionDetent.current = height > fractionHeight ? .large : .fraction
                                 }
-                                .sheet(isPresented: $shouldPresentAccountSheet) {
-                                    AccountView(isPresented: $shouldPresentAccountSheet)
+                                .sheet(isPresented: $isPresentingAccountSheet) {
+                                    AccountView(isPresented: $isPresentingAccountSheet)
                                 }
                             }
                     } else {
                         Color.Cobrowse.background
-                            .sheet(isPresented: $shouldPresentAccountSheet) {
-                                AccountView(isPresented: $shouldPresentAccountSheet)
+                            .sheet(isPresented: $isPresentingAccountSheet) {
+                                AccountView(isPresented: $isPresentingAccountSheet)
                             }
                     }
                 }
@@ -72,7 +70,7 @@ struct Dashboard: View {
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button { shouldPresentAccountSheet = true }
+                Button { isPresentingAccountSheet = true }
                     label: { Image(systemName: "person.crop.circle") }
             }
         }
@@ -93,11 +91,11 @@ extension Dashboard {
                     .font(.title3)
                     .foregroundStyle(Color.Cobrowse.text)
                 
-                if let accountTotal = account.total.currencyString {
-                    Text(accountTotal)
+                if let accountBalance = account.balance.currencyString {
+                    Text(accountBalance)
                         .font(.title)
                         .foregroundStyle(Color.Cobrowse.primary)
-//                        .redacted()
+                        .redacted()
                 }
             }
         }
