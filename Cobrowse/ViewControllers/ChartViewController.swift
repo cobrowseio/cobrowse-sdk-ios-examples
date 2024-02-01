@@ -28,7 +28,7 @@ class ChartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        balanceLabel.text = account.total.currencyString
+        balanceLabel.text = account.balance.currencyString
         
         subscribeToSession()
         subscribeToTransactions()
