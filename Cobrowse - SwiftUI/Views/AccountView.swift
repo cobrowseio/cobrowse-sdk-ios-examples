@@ -23,17 +23,10 @@ struct AccountView: View {
                     .frame(height: 120)
                     .foregroundColor(Color.Cobrowse.primary)
                 
-                VStack(spacing: 2) {
-                    Text("Frank Spensor")
-                        .font(.largeTitle)
-                        .foregroundStyle(Color.Cobrowse.text)
-//                        .redacted()
-                    
-                    Text(verbatim: "f.spencer@demo.com")
-                        .font(.title2)
-                        .foregroundStyle(Color.Cobrowse.text)
-//                        .redacted()
-                }
+                AccountView.Details(
+                    name: "Frank Spensor",
+                    email: "f.spencer@demo.com"
+                )
                 
                 Color.Cobrowse.background.ignoresSafeArea()
                 
@@ -89,6 +82,28 @@ struct AccountView: View {
             else { return }
             
             session.current = nil
+        }
+    }
+}
+
+extension AccountView {
+    struct Details: View {
+        
+        let name: String
+        let email: String
+        
+        var body: some View {
+            VStack(spacing: 2) {
+                Text(name)
+                    .font(.largeTitle)
+                    .foregroundStyle(Color.Cobrowse.text)
+//                        .redacted()
+                
+                Text(verbatim: email)
+                    .font(.title2)
+                    .foregroundStyle(Color.Cobrowse.text)
+//                        .redacted()
+            }
         }
     }
 }

@@ -26,9 +26,9 @@ struct AgentPresentView: View {
                     Image(systemName: "rectangle.inset.filled.and.person.filled")
                         .font(.system(size: 120, weight: .thin))
                         .foregroundColor(.Cobrowse.primary)
-                        
                     
                     Color.Cobrowse.background
+                } else {
                     VStack(spacing: 16) {
                         Text("Please enter your present code")
                             .font(.title2)
