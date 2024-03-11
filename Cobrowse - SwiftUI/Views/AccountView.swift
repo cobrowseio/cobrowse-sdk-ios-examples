@@ -17,16 +17,8 @@ struct AccountView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Image(systemName: "person.crop.circle.fill")
-                    .resizable()
-                    .aspectRatio(1, contentMode: .fit)
-                    .frame(height: 120)
-                    .foregroundColor(Color.Cobrowse.primary)
                 
-                AccountView.Details(
-                    name: "Frank Spensor",
-                    email: "f.spencer@demo.com"
-                )
+                AccountView.Heading()
                 
                 Color.Cobrowse.background.ignoresSafeArea()
                 
@@ -87,6 +79,27 @@ struct AccountView: View {
 }
 
 extension AccountView {
+    struct Heading: View {
+        
+        var body: some View {
+            VStack {
+                Image(systemName: "person.crop.circle.fill")
+                    .resizable()
+                    .aspectRatio(1, contentMode: .fit)
+                    .frame(height: 120)
+                    .foregroundColor(Color.Cobrowse.primary)
+                
+                Details(
+                    name: "Frank Spencer",
+                    email: "f.spencer@example.com"
+                )
+            }
+            .registerSelector("AccountView Heading")
+        }
+    }
+}
+
+extension AccountView.Heading {
     struct Details: View {
         
         let name: String
