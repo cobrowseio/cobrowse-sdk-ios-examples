@@ -110,12 +110,10 @@ extension AccountView.Heading {
                 Text(name)
                     .font(.largeTitle)
                     .foregroundStyle(Color.Cobrowse.text)
-//                        .redacted()
                 
                 Text(verbatim: email)
                     .font(.title2)
                     .foregroundStyle(Color.Cobrowse.text)
-//                        .redacted()
             }
         }
     }
