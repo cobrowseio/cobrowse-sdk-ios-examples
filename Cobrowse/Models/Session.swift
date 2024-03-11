@@ -7,6 +7,8 @@ import Foundation
 
 import CobrowseIO
 
+var hasRequested = false
+
 class Session: NSObject, ObservableObject, CobrowseIODelegate {
     
     @Published var current: CBIOSession?
@@ -20,5 +22,7 @@ class Session: NSObject, ObservableObject, CobrowseIODelegate {
     
     func cobrowseSessionDidEnd(_ session: CBIOSession) {
         current = nil
+        
+        hasRequested = false
     }
 }

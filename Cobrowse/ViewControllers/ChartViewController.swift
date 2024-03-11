@@ -103,7 +103,7 @@ extension ChartViewController {
     
     private func subscribeToSignedInState() {
         account.$isSignedIn
-            .dropFirst()
+//            .dropFirst()
             .sink { [weak self] isSignedIn in
                 guard let self = self else { return }
                 

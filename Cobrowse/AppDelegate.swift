@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let cobrowse = CobrowseIO.instance()
         
-        cobrowse.license = "trial"
+        cobrowse.license = "tG4g9cexebTjGw"
         
         cobrowse.customData = [
             kCBIOUserEmailKey: "ios@example.com",

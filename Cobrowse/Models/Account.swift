@@ -10,7 +10,7 @@ class Account: ObservableObject {
     
     let balance = 2495.34
     
-    @Published var isSignedIn = false
+    @Published var isSignedIn = true
     @Published var transactions: [Transaction] = []
     
     init() {
@@ -35,12 +35,26 @@ class Account: ObservableObject {
         let startOfMonth = currentDate.startOfMonth
         
         return [
-            Transaction.generate(1, for: [.childcare], between: startOfMonth...currentDate),
-            Transaction.generate(2, for: [.groceries], between: startOfMonth...currentDate),
-            Transaction.generate(1, for: [.utilities], between: startOfMonth...currentDate),
+            Transaction(
+                title: "KinderCare",
+                subtitle: "today at 1:07 AM",
+                amount: 113.89,
+                date: Date.init(timeIntervalSince1970: 1709650867.751),
+                category: .childcare),
+            Transaction(
+                title: "AT&T",
+                subtitle: "yeasterday at 4:17 AM",
+                amount: 61.91,
+                date: Date.init(timeIntervalSince1970: 1709525849.596),
+                category: .utilities),
+            Transaction(
+                title: "Asda",
+                subtitle: "last Friday at 8:03 AM",
+                amount: 144.83,
+                date: Date.init(timeIntervalSince1970: 1709280216.567),
+                category: .groceries)
         ]
-        .flatMap { $0 }
+//        .flatMap { $0 }
         .sorted { $0.date > $1.date }
     }
 }
-

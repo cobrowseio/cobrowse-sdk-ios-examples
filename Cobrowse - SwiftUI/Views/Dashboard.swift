@@ -95,7 +95,7 @@ extension Dashboard {
                     Text(accountBalance)
                         .font(.title)
                         .foregroundStyle(Color.Cobrowse.primary)
-                        .redacted()
+//                        .redacted()
                 }
             }
         }
