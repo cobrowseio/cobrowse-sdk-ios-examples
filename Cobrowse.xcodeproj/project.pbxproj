@@ -29,6 +29,10 @@
 		4A2B3A972A0DA657009FB31A /* DeepLiker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2B3A962A0DA657009FB31A /* DeepLiker.swift */; };
 		4A369B8929E57EFF002A51D6 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A369B8829E57EFF002A51D6 /* TransactionTableViewCell.swift */; };
 		4A369B8B29E57F7A002A51D6 /* TransactionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A369B8A29E57F7A002A51D6 /* TransactionTableViewController.swift */; };
+		4A4016842B9F2ABD002ACABB /* CobrowseIOAppExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4016832B9F2ABD002ACABB /* CobrowseIOAppExtension.framework */; };
+		4A4016852B9F2ABD002ACABB /* CobrowseIOAppExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4016832B9F2ABD002ACABB /* CobrowseIOAppExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4A4016882B9F2B04002ACABB /* CobrowseIOAppExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4016872B9F2B04002ACABB /* CobrowseIOAppExtension.framework */; };
+		4A4016892B9F2B04002ACABB /* CobrowseIOAppExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4016872B9F2B04002ACABB /* CobrowseIOAppExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4A4CEC102B067954004BD263 /* Cobrowse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CEC0F2B067954004BD263 /* Cobrowse.swift */; };
 		4A4CEC122B067954004BD263 /* TestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CEC112B067954004BD263 /* TestingView.swift */; };
 		4A4CEC142B067954004BD263 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4CEC132B067954004BD263 /* Assets.xcassets */; };
@@ -84,7 +88,6 @@
 		4AD22B3A2B6B99080051D631 /* ConsentPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD22B392B6B99080051D631 /* ConsentPromptViewController.swift */; };
 		4AD22B3C2B6BD0A60051D631 /* FullDeviceConsentPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD22B3B2B6BD0A60051D631 /* FullDeviceConsentPromptViewController.swift */; };
 		4AD918E829F17CCE0078193A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD918E729F17CCE0078193A /* Session.swift */; };
-		4ADB7A9A2B838FD9000C7CAB /* CobrowseIOAppExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 4ADB7A992B838FD9000C7CAB /* CobrowseIOAppExtension */; };
 		4AE76BE12B2B35E100712F60 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE76BE02B2B35E100712F60 /* Dashboard.swift */; };
 		4AEEDB3729DF0743009B7208 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEEDB3629DF0743009B7208 /* AppDelegate.swift */; };
 		4AEEDB3B29DF0743009B7208 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEEDB3A29DF0743009B7208 /* ChartViewController.swift */; };
@@ -112,6 +115,28 @@
 			dstSubfolderSpec = 10;
 			files = (
 				4A263C302B8E0E0300481F24 /* CobrowseIO.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A4016862B9F2ABD002ACABB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4A4016852B9F2ABD002ACABB /* CobrowseIOAppExtension.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A40168A2B9F2B04002ACABB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4A4016892B9F2B04002ACABB /* CobrowseIOAppExtension.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,6 +206,8 @@
 		4A2B3A962A0DA657009FB31A /* DeepLiker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLiker.swift; sourceTree = "<group>"; };
 		4A369B8829E57EFF002A51D6 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		4A369B8A29E57F7A002A51D6 /* TransactionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewController.swift; sourceTree = "<group>"; };
+		4A4016832B9F2ABD002ACABB /* CobrowseIOAppExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CobrowseIOAppExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A4016872B9F2B04002ACABB /* CobrowseIOAppExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CobrowseIOAppExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A4CEC0D2B067954004BD263 /* Cobrowse - SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cobrowse - SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A4CEC0F2B067954004BD263 /* Cobrowse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cobrowse.swift; sourceTree = "<group>"; };
 		4A4CEC112B067954004BD263 /* TestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingView.swift; sourceTree = "<group>"; };
@@ -261,7 +288,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ADB7A9A2B838FD9000C7CAB /* CobrowseIOAppExtension in Frameworks */,
+				4A4016882B9F2B04002ACABB /* CobrowseIOAppExtension.framework in Frameworks */,
 				4A6DD4FA2B10F2190083EE2C /* ReplayKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +297,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A4016842B9F2ABD002ACABB /* CobrowseIOAppExtension.framework in Frameworks */,
 				4AC7E51C29F94CEF00722B29 /* ReplayKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,6 +478,8 @@
 		4AC7E51A29F94CEF00722B29 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A4016872B9F2B04002ACABB /* CobrowseIOAppExtension.framework */,
+				4A4016832B9F2ABD002ACABB /* CobrowseIOAppExtension.framework */,
 				4A263C362B8F9BDF00481F24 /* CobrowseIOAppExtension.framework */,
 				4A263C322B8F9BD800481F24 /* CobrowseIO.framework */,
 				4A263C2E2B8E0E0300481F24 /* CobrowseIO.framework */,
@@ -554,6 +584,7 @@
 				4A6DD4F52B10F2190083EE2C /* Sources */,
 				4A6DD4F62B10F2190083EE2C /* Frameworks */,
 				4A6DD4F72B10F2190083EE2C /* Resources */,
+				4A40168A2B9F2B04002ACABB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -561,7 +592,6 @@
 			);
 			name = "Broadcast Extension - SwiftUI";
 			packageProductDependencies = (
-				4ADB7A992B838FD9000C7CAB /* CobrowseIOAppExtension */,
 			);
 			productName = "Broadcast Extension - SwiftUI";
 			productReference = 4A6DD4F92B10F2190083EE2C /* Broadcast Extension - SwiftUI.appex */;
@@ -574,6 +604,7 @@
 				4AC7E51529F94CEF00722B29 /* Sources */,
 				4AC7E51629F94CEF00722B29 /* Frameworks */,
 				4AC7E51729F94CEF00722B29 /* Resources */,
+				4A4016862B9F2ABD002ACABB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1301,10 +1332,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4AF1CD6829FA68A700261E25 /* XCRemoteSwiftPackageReference "Charts" */;
 			productName = DGCharts;
-		};
-		4ADB7A992B838FD9000C7CAB /* CobrowseIOAppExtension */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = CobrowseIOAppExtension;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
