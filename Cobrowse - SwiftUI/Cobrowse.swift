@@ -21,7 +21,7 @@ struct Cobrowse: App {
                     cobrowse.license = "tG4g9cexebTjGw"
                     
                     cobrowse.customData = [
-                        kCBIOUserEmailKey: "ios@demo.com",
+                        kCBIOUserEmailKey: "ios@example.com",
                         kCBIODeviceNameKey: "iOS Demo"
                     ] as [String : NSObject]
                     

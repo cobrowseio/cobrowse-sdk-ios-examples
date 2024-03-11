@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         cobrowse.license = "trial"
         
         cobrowse.customData = [
-            kCBIOUserEmailKey: "ios@demo.com",
+            kCBIOUserEmailKey: "ios@example.com",
             kCBIODeviceNameKey: "iOS Demo"
         ] as [String : NSObject]
         
