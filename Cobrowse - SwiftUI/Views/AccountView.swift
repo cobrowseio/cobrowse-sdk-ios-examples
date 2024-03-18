@@ -94,7 +94,6 @@ extension AccountView {
                     email: "f.spencer@example.com"
                 )
             }
-            .registerSelector("AccountView Heading")
         }
     }
 }

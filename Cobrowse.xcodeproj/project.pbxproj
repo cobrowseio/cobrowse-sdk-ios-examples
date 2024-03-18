@@ -676,7 +676,7 @@
 			mainGroup = 4AEEDB2A29DF0743009B7208;
 			packageReferences = (
 				4AF1CD6829FA68A700261E25 /* XCRemoteSwiftPackageReference "Charts" */,
-				4A4016812B9F1A43002ACABB /* XCLocalSwiftPackageReference "../cobrowse-sdk-ios-binary" */,
+				4A40168B2B9F49DF002ACABB /* XCLocalSwiftPackageReference "../cobrowse-sdk-ios-binary" */,
 			);
 			productRefGroup = 4AEEDB3429DF0743009B7208 /* Products */;
 			projectDirPath = "";
@@ -1310,7 +1310,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		4A4016812B9F1A43002ACABB /* XCLocalSwiftPackageReference "../cobrowse-sdk-ios-binary" */ = {
+		4A40168B2B9F49DF002ACABB /* XCLocalSwiftPackageReference "../cobrowse-sdk-ios-binary" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = "../cobrowse-sdk-ios-binary";
 		};
