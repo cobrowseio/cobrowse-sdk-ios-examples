@@ -44,12 +44,13 @@ struct AgentPresentView: View {
                                 else { return }
                                 
                                 Task {
-                                    do {
-                                        let agentSession = try await CobrowseIO.instance().getSession(code)
-                                        agentSession.setCapabilities([])
-                                    } catch(let error) {
-                                        print(error)
-                                        shouldShake = true
+                                    CobrowseIO.instance().getSession(code) { error, session in
+                                        if let error = error {
+                                            print(error)
+                                            shouldShake = true
+                                        }
+
+                                        session?.setCapabilities([])
                                     }
                                 }
                             })
