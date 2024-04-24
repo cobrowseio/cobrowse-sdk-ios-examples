@@ -77,6 +77,7 @@
 		4AA509F42BD05DFA00AABCC5 /* CBIOSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAE2C5C2BBC4D0200444E5A /* CBIOSession.swift */; };
 		4AA509FA2BD05E7600AABCC5 /* CobrowseIO in Frameworks */ = {isa = PBXBuildFile; productRef = 4AA509F92BD05E7600AABCC5 /* CobrowseIO */; };
 		4AB806172BD93675003A867D /* CobrowseIO in Frameworks */ = {isa = PBXBuildFile; productRef = 4AB806162BD93675003A867D /* CobrowseIO */; };
+		4AB8061B2BD95948003A867D /* Broadcast Extension - SwiftUI.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4A6DD4F92B10F2190083EE2C /* Broadcast Extension - SwiftUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4AC0136029E5989000461FA9 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC0135F29E5989000461FA9 /* Identifiers.swift */; };
 		4AC0136229E59DBF00461FA9 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC0136129E59DBF00461FA9 /* Transaction.swift */; };
 		4AC0136629E5B35F00461FA9 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC0136529E5B35F00461FA9 /* Formatters.swift */; };
@@ -143,6 +144,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4AB8061C2BD95948003A867D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4AEEDB2B29DF0743009B7208 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A6DD4F82B10F2190083EE2C;
+			remoteInfo = "Broadcast Extension - SwiftUI";
+		};
 		4AEC735F2BA8DE72009F67BC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4AEEDB2B29DF0743009B7208 /* Project object */;
@@ -180,12 +188,13 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4A6DD4F32B10DCD10083EE2C /* Embed Foundation Extensions */ = {
+		4AB8061E2BD95948003A867D /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				4AB8061B2BD95948003A867D /* Broadcast Extension - SwiftUI.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,11 +614,12 @@
 				4A4CEC092B067954004BD263 /* Sources */,
 				4A4CEC0A2B067954004BD263 /* Frameworks */,
 				4A4CEC0B2B067954004BD263 /* Resources */,
-				4A6DD4F32B10DCD10083EE2C /* Embed Foundation Extensions */,
+				4AB8061E2BD95948003A867D /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4AB8061D2BD95948003A867D /* PBXTargetDependency */,
 			);
 			name = "Cobrowse - SwiftUI";
 			packageProductDependencies = (
@@ -983,6 +993,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4AB8061D2BD95948003A867D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A6DD4F82B10F2190083EE2C /* Broadcast Extension - SwiftUI */;
+			targetProxy = 4AB8061C2BD95948003A867D /* PBXContainerItemProxy */;
+		};
 		4AEC73602BA8DE72009F67BC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4AEC734C2BA8DE71009F67BC /* App Clip */;
