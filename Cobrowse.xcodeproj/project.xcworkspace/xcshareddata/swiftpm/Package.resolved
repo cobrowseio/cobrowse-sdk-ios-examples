@@ -1,14 +1,24 @@
 {
+  "originHash" : "7a1a6cf20fdf5748550fae37eed4091ee8512ddfc6f9561e4043e632898af27c",
   "pins" : [
     {
       "identity" : "charts",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/danielgindi/Charts.git",
       "state" : {
-        "revision" : "0a229f8c914b0ec93798cee058cf75b339297513",
-        "version" : "5.0.0"
+        "revision" : "dd9c72e3d7e751e769971092a6bd72d39198ae63",
+        "version" : "5.1.0"
+      }
+    },
+    {
+      "identity" : "cobrowse-sdk-ios-binary",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/cobrowseio/cobrowse-sdk-ios-binary.git",
+      "state" : {
+        "revision" : "032048b22e9cacc02ecf775aadba7cb3e027be2c",
+        "version" : "2.30.0"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

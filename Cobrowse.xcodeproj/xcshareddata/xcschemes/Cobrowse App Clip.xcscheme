@@ -4,7 +4,8 @@
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
-      buildImplicitDependencies = "YES">
+      buildImplicitDependencies = "YES"
+      buildArchitectures = "Automatic">
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -14,9 +15,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4AEEDB3229DF0743009B7208"
-               BuildableName = "Cobrowse.app"
-               BlueprintName = "Cobrowse"
+               BlueprintIdentifier = "4AEC734C2BA8DE71009F67BC"
+               BuildableName = "App Clip.app"
+               BlueprintName = "App Clip"
                ReferencedContainer = "container:Cobrowse.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -43,12 +44,19 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4AEEDB3229DF0743009B7208"
-            BuildableName = "Cobrowse.app"
-            BlueprintName = "Cobrowse"
+            BlueprintIdentifier = "4AEC734C2BA8DE71009F67BC"
+            BuildableName = "App Clip.app"
+            BlueprintName = "App Clip"
             ReferencedContainer = "container:Cobrowse.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "_XCAppClipURL"
+            value = "https://cbrws.io/clip"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -60,9 +68,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4AEEDB3229DF0743009B7208"
-            BuildableName = "Cobrowse.app"
-            BlueprintName = "Cobrowse"
+            BlueprintIdentifier = "4AEC734C2BA8DE71009F67BC"
+            BuildableName = "App Clip.app"
+            BlueprintName = "App Clip"
             ReferencedContainer = "container:Cobrowse.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

@@ -3,7 +3,7 @@
 //  Cobrowse
 //
 
-import UIKit
+import Foundation
 
 struct Transaction: Identifiable, Hashable {
     

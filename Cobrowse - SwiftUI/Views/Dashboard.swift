@@ -90,11 +90,13 @@ extension Dashboard {
                 Text("Balance")
                     .font(.title3)
                     .foregroundStyle(Color.Cobrowse.text)
+                    .redacted()
                 
                 if let accountBalance = account.balance.currencyString {
                     Text(accountBalance)
                         .font(.title)
                         .foregroundStyle(Color.Cobrowse.primary)
+                        .redacted()
                 }
             }
         }

@@ -34,7 +34,7 @@ extension Transaction {
             .navigationDestination(for: Transaction.self, destination: { transaction in
                 Transaction.Detail(for: transaction)
             })
-            .sessionToolbar(trackDetent: true)
+            .sessionToolbar(trackDetent: true) 
         }
         
         init(transactions: [Transaction]) {

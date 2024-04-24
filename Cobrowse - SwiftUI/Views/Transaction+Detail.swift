@@ -33,11 +33,11 @@ extension Transaction {
                 }
                 .navigationTitle("Transaction")
                 .navigationBarTitleDisplayMode(.inline)
-                .sessionToolbar()
+                .sessionToolbar(trackDetent: true)
                 .navigationDestination(for: URL.self) { url in
                     WebView(url: url)
                         .navigationTitle("Transaction")
-                        .sessionToolbar()
+                        .sessionToolbar(trackDetent: true)
                 }
         }
         

@@ -24,11 +24,6 @@ extension Session {
     
     func cobrowseHandleSessionRequest(_ session: CBIOSession) {
         
-        guard hasRequested == false
-            else { return }
-        
-        hasRequested = true
-        
         typealias ConsentPrompt = ConsentPromptViewController
         
         guard let consentPrompt: ConsentPrompt = UIStoryboard.main.viewControllerWith(id: .consentPrompt)
