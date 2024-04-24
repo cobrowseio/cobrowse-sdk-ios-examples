@@ -28,7 +28,7 @@ class ChartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        balanceLabel.text = account.total.currencyString
+        balanceLabel.text = account.balance.currencyString
         
         subscribeToSession()
         subscribeToTransactions()
@@ -96,14 +96,14 @@ extension ChartViewController {
             .sink { [weak self] transactions in
                 guard let self = self else { return }
                 
-                recentTransactions = transactions.recentTrnsactions
+                recentTransactions = transactions.recentTransactions
             }
             .store(in: &bag)
     }
     
     private func subscribeToSignedInState() {
         account.$isSignedIn
-            .dropFirst()
+//            .dropFirst()
             .sink { [weak self] isSignedIn in
                 guard let self = self else { return }
                 

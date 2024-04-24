@@ -1,4 +1,5 @@
 {
+  "originHash" : "7a1a6cf20fdf5748550fae37eed4091ee8512ddfc6f9561e4043e632898af27c",
   "pins" : [
     {
       "identity" : "charts",
@@ -19,5 +20,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

@@ -7,7 +7,7 @@ import Foundation
 
 import CobrowseIO
 
-class Session: NSObject, CobrowseIODelegate {
+class Session: NSObject, ObservableObject, CobrowseIODelegate {
     
     @Published var current: CBIOSession?
     
