@@ -35,6 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         cobrowse.delegate = session
         
+        Demo.setup() // Check if launching from https://cobrowse.io/demo
+        
         cobrowse.start()
         
         return true

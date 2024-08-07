@@ -6,11 +6,11 @@
 import SwiftUI
 import CobrowseIO
 
+let session = Session()
+let account = Account()
+
 @main
 struct Cobrowse: App {
-    
-    let session = Session()
-    let account = Account()
     
     var body: some Scene {
         WindowGroup {
