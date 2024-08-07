@@ -7,6 +7,7 @@ import UIKit
 
 import CobrowseIO
 
+let account = Account()
 let session = Session()
 
 @main
