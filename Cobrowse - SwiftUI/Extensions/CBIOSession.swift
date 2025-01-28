@@ -3,7 +3,7 @@
 //  CobrowseIO
 //
 
-import CobrowseIO
+import CobrowseSDK
 
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)
@@ -12,7 +12,7 @@ public extension CBIOSession {
     func setFullDevice(state: CBIOFullDeviceState) async throws -> CBIOSession {
         return try await withCheckedThrowingContinuation { continuation in
             DispatchQueue.main.async {
-                self.setFullDeviceState(state) { error, session in
+                self.setFullDevice(state) { error, session in
                     CBErrorSessionBlock.process(error, with: session, for: continuation)
                 }
             }

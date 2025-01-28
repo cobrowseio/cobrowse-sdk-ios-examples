@@ -118,17 +118,11 @@
 		4A163E3B2BD96308004F8658 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A163D512BD95E94004F8658 /* UserDefault.swift */; };
 		4A163E3C2BD9632D004F8658 /* CodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A163D642BD95E94004F8658 /* CodeTextField.swift */; };
 		4A163E3F2BD96388004F8658 /* SampleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A163DA92BD95EAA004F8658 /* SampleHandler.swift */; };
+		4A3B82702CA4A10400EE3C70 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A163D442BD95E94004F8658 /* UINavigationController.swift */; };
 		4A5FD1692C6E42D100D03DC1 /* SessionControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FD1682C6E42D100D03DC1 /* SessionControlView.swift */; };
 		4A5FD16A2C6E42D600D03DC1 /* SessionControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FD1682C6E42D100D03DC1 /* SessionControlView.swift */; };
-		4A5FD16C2C6E42EC00D03DC1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FD16B2C6E42EC00D03DC1 /* UIColor.swift */; };
-		4A5FD16D2C6E42EC00D03DC1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FD16B2C6E42EC00D03DC1 /* UIColor.swift */; };
 		4A5FD16F2C6E431600D03DC1 /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FD16E2C6E431600D03DC1 /* Demo.swift */; };
 		4A5FD1702C6E431600D03DC1 /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FD16E2C6E431600D03DC1 /* Demo.swift */; };
-		4A5FD1792C6E43FB00D03DC1 /* CobrowseIO in Frameworks */ = {isa = PBXBuildFile; productRef = 4A5FD1782C6E43FB00D03DC1 /* CobrowseIO */; };
-		4A5FD17B2C6E43FB00D03DC1 /* CobrowseIOAppExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 4A5FD17A2C6E43FB00D03DC1 /* CobrowseIOAppExtension */; };
-		4A5FD17D2C6E440D00D03DC1 /* CobrowseIO in Frameworks */ = {isa = PBXBuildFile; productRef = 4A5FD17C2C6E440D00D03DC1 /* CobrowseIO */; };
-		4A5FD17F2C6E441300D03DC1 /* CobrowseIOAppExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 4A5FD17E2C6E441300D03DC1 /* CobrowseIOAppExtension */; };
-		4A5FD1812C6E441800D03DC1 /* CobrowseIO in Frameworks */ = {isa = PBXBuildFile; productRef = 4A5FD1802C6E441800D03DC1 /* CobrowseIO */; };
 		4A5FD1942C6E45EE00D03DC1 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FD1842C6E45EE00D03DC1 /* AccountView.swift */; };
 		4A5FD1952C6E45EE00D03DC1 /* AgentPresentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FD1852C6E45EE00D03DC1 /* AgentPresentView.swift */; };
 		4A5FD1962C6E45EE00D03DC1 /* CodeInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FD1862C6E45EE00D03DC1 /* CodeInput.swift */; };
@@ -146,25 +140,23 @@
 		4A5FD1A22C6E45EE00D03DC1 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FD1922C6E45EE00D03DC1 /* WebView.swift */; };
 		4A5FD1A52C6E465F00D03DC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FD1A32C6E465F00D03DC1 /* AppDelegate.swift */; };
 		4A5FD1A62C6E465F00D03DC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FD1A42C6E465F00D03DC1 /* SceneDelegate.swift */; };
-		4A6DD4FA2B10F2190083EE2C /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC7E51B29F94CEF00722B29 /* ReplayKit.framework */; };
 		4A6DD5012B10F2190083EE2C /* Broadcast Extension - SwiftUI.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4A6DD4F92B10F2190083EE2C /* Broadcast Extension - SwiftUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4A75B8342D49268B009CD9DF /* CobrowseSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 4A75B8332D49268B009CD9DF /* CobrowseSDK */; };
+		4A75B8362D492690009CD9DF /* CobrowseSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 4A75B8352D492690009CD9DF /* CobrowseSDK */; };
+		4A75B8382D492694009CD9DF /* CobrowseSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 4A75B8372D492694009CD9DF /* CobrowseSDK */; };
+		4A75B83A2D492699009CD9DF /* CobrowseSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 4A75B8392D492699009CD9DF /* CobrowseSDK */; };
+		4A75B83C2D49269D009CD9DF /* CobrowseSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 4A75B83B2D49269D009CD9DF /* CobrowseSDK */; };
 		4A77B5C92C52EE5B0059D87F /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 4A163D742BD95E94004F8658 /* PrivacyInfo.xcprivacy */; };
 		4A77B5D22C52F1650059D87F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A163D6D2BD95E94004F8658 /* Assets.xcassets */; };
 		4A77B5D32C52F1F00059D87F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A163D712BD95E94004F8658 /* LaunchScreen.storyboard */; };
 		4A84E15C2B2222F000C2789A /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A84E15B2B2222F000C2789A /* UINavigationController.swift */; };
 		4AC7E51C29F94CEF00722B29 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC7E51B29F94CEF00722B29 /* ReplayKit.framework */; };
 		4AC85E0F2C19D491001338EF /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 4AC85E0E2C19D491001338EF /* DGCharts */; };
+		4AE2BAAC2C9D1D0200FF6ED0 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC7E51B29F94CEF00722B29 /* ReplayKit.framework */; };
 		4AF1CD5C29FA61B200261E25 /* Broadcast Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4AC7E51929F94CEF00722B29 /* Broadcast Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4A163DFD2BD95F68004F8658 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4AEEDB2B29DF0743009B7208 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4A163DEA2BD95F67004F8658;
-			remoteInfo = "Cobrowse App Clip";
-		};
 		4A6DD4FF2B10F2190083EE2C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4AEEDB2B29DF0743009B7208 /* Project object */;
@@ -193,6 +185,16 @@
 			name = "Embed App Clips";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4A3513F02CD507EB00B7FE21 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A6DD4F32B10DCD10083EE2C /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -204,17 +206,7 @@
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4A7626FD2C530A8B004369CC /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4A77B5CD2C52F01C0059D87F /* Embed Frameworks */ = {
+		4AD30CCB2CF5EAB7002DD63E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
@@ -308,7 +300,6 @@
 		4A1D47212A03BFDF00109053 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		4A4CEC0D2B067954004BD263 /* Cobrowse - SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cobrowse - SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A5FD1682C6E42D100D03DC1 /* SessionControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionControlView.swift; sourceTree = "<group>"; };
-		4A5FD16B2C6E42EC00D03DC1 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		4A5FD16E2C6E431600D03DC1 /* Demo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Demo.swift; sourceTree = "<group>"; };
 		4A5FD1842C6E45EE00D03DC1 /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		4A5FD1852C6E45EE00D03DC1 /* AgentPresentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentPresentView.swift; sourceTree = "<group>"; };
@@ -343,8 +334,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A5FD1812C6E441800D03DC1 /* CobrowseIO in Frameworks */,
 				4A163E2B2BD95FE6004F8658 /* DGCharts in Frameworks */,
+				4A75B83C2D49269D009CD9DF /* CobrowseSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,7 +343,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A5FD17D2C6E440D00D03DC1 /* CobrowseIO in Frameworks */,
+				4A75B8382D492694009CD9DF /* CobrowseSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,8 +351,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A5FD17F2C6E441300D03DC1 /* CobrowseIOAppExtension in Frameworks */,
-				4A6DD4FA2B10F2190083EE2C /* ReplayKit.framework in Frameworks */,
+				4AE2BAAC2C9D1D0200FF6ED0 /* ReplayKit.framework in Frameworks */,
+				4A75B83A2D492699009CD9DF /* CobrowseSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,8 +360,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A5FD17B2C6E43FB00D03DC1 /* CobrowseIOAppExtension in Frameworks */,
 				4AC7E51C29F94CEF00722B29 /* ReplayKit.framework in Frameworks */,
+				4A75B8362D492690009CD9DF /* CobrowseSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,8 +369,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A5FD1792C6E43FB00D03DC1 /* CobrowseIO in Frameworks */,
 				4AC85E0F2C19D491001338EF /* DGCharts in Frameworks */,
+				4A75B8342D49268B009CD9DF /* CobrowseSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +391,6 @@
 				4A163D412BD95E94004F8658 /* Locale.Currency+UIKit.swift */,
 				4A163D422BD95E94004F8658 /* Publisher.swift */,
 				4A163D432BD95E94004F8658 /* RawRepresentable.swift */,
-				4A5FD16B2C6E42EC00D03DC1 /* UIColor.swift */,
 				4A84E15B2B2222F000C2789A /* UINavigationController.swift */,
 				4A1D47212A03BFDF00109053 /* UITextField.swift */,
 				4A84E1592B2222E300C2789A /* UIWindow.swift */,
@@ -644,7 +634,7 @@
 				4A163DE72BD95F67004F8658 /* Sources */,
 				4A163DE82BD95F67004F8658 /* Frameworks */,
 				4A163DE92BD95F67004F8658 /* Resources */,
-				4A7626FD2C530A8B004369CC /* Embed Frameworks */,
+				4A3513F02CD507EB00B7FE21 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -653,7 +643,7 @@
 			name = "Cobrowse App Clip";
 			packageProductDependencies = (
 				4A163E2A2BD95FE6004F8658 /* DGCharts */,
-				4A5FD1802C6E441800D03DC1 /* CobrowseIO */,
+				4A75B83B2D49269D009CD9DF /* CobrowseSDK */,
 			);
 			productName = "Cobrowse App Clip";
 			productReference = 4A163DEB2BD95F67004F8658 /* Cobrowse App Clip.app */;
@@ -675,7 +665,7 @@
 			);
 			name = "Cobrowse - SwiftUI";
 			packageProductDependencies = (
-				4A5FD17C2C6E440D00D03DC1 /* CobrowseIO */,
+				4A75B8372D492694009CD9DF /* CobrowseSDK */,
 			);
 			productName = "Cobrowse - SwiftUI";
 			productReference = 4A4CEC0D2B067954004BD263 /* Cobrowse - SwiftUI.app */;
@@ -695,7 +685,7 @@
 			);
 			name = "Broadcast Extension - SwiftUI";
 			packageProductDependencies = (
-				4A5FD17E2C6E441300D03DC1 /* CobrowseIOAppExtension */,
+				4A75B8392D492699009CD9DF /* CobrowseSDK */,
 			);
 			productName = "Broadcast Extension - SwiftUI";
 			productReference = 4A6DD4F92B10F2190083EE2C /* Broadcast Extension - SwiftUI.appex */;
@@ -715,7 +705,7 @@
 			);
 			name = "Broadcast Extension";
 			packageProductDependencies = (
-				4A5FD17A2C6E43FB00D03DC1 /* CobrowseIOAppExtension */,
+				4A75B8352D492690009CD9DF /* CobrowseSDK */,
 			);
 			productName = "Broadcast Extension";
 			productReference = 4AC7E51929F94CEF00722B29 /* Broadcast Extension.appex */;
@@ -731,18 +721,17 @@
 				4AC7E53829F96B0000722B29 /* Cobrowse.io */,
 				4AF1CD5F29FA61B300261E25 /* Embed Foundation Extensions */,
 				4A163E032BD95F68004F8658 /* Embed App Clips */,
-				4A77B5CD2C52F01C0059D87F /* Embed Frameworks */,
+				4AD30CCB2CF5EAB7002DD63E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				4AF1CD5E29FA61B200261E25 /* PBXTargetDependency */,
-				4A163DFE2BD95F68004F8658 /* PBXTargetDependency */,
 			);
 			name = Cobrowse;
 			packageProductDependencies = (
 				4AC85E0E2C19D491001338EF /* DGCharts */,
-				4A5FD1782C6E43FB00D03DC1 /* CobrowseIO */,
+				4A75B8332D49268B009CD9DF /* CobrowseSDK */,
 			);
 			productName = Cobrowse;
 			productReference = 4AEEDB3329DF0743009B7208 /* Cobrowse.app */;
@@ -786,7 +775,7 @@
 			mainGroup = 4AEEDB2A29DF0743009B7208;
 			packageReferences = (
 				4AF1CD6829FA68A700261E25 /* XCRemoteSwiftPackageReference "Charts" */,
-				4A5FD1772C6E43FB00D03DC1 /* XCRemoteSwiftPackageReference "cobrowse-sdk-ios-binary" */,
+				4AAA77C52D4921B200F5829E /* XCRemoteSwiftPackageReference "cobrowse-sdk-ios-binary" */,
 			);
 			productRefGroup = 4AEEDB3429DF0743009B7208 /* Products */;
 			projectDirPath = "";
@@ -910,7 +899,6 @@
 				4A163E132BD95FA8004F8658 /* Date.swift in Sources */,
 				4A163E142BD95FA8004F8658 /* Dictionary.swift in Sources */,
 				4A163E152BD95FA8004F8658 /* Formatters.swift in Sources */,
-				4A5FD16D2C6E42EC00D03DC1 /* UIColor.swift in Sources */,
 				4A5FD16A2C6E42D600D03DC1 /* SessionControlView.swift in Sources */,
 				4A163E162BD95FA8004F8658 /* Session.swift in Sources */,
 				4A163E172BD95FA8004F8658 /* UINavigationController.swift in Sources */,
@@ -1018,9 +1006,9 @@
 				4A163D8B2BD95E94004F8658 /* UserDefault.swift in Sources */,
 				4A163D882BD95E94004F8658 /* Formatters.swift in Sources */,
 				4A163D922BD95E94004F8658 /* AccountViewController.swift in Sources */,
+				4A3B82702CA4A10400EE3C70 /* UINavigationController.swift in Sources */,
 				4A163D8F2BD95E94004F8658 /* Transaction.swift in Sources */,
 				4A163D7A2BD95E94004F8658 /* DispatchQueue.swift in Sources */,
-				4A5FD16C2C6E42EC00D03DC1 /* UIColor.swift in Sources */,
 				4A5FD1692C6E42D100D03DC1 /* SessionControlView.swift in Sources */,
 				4A163D822BD95E94004F8658 /* UITableView.swift in Sources */,
 				4A163D982BD95E94004F8658 /* SignInViewController.swift in Sources */,
@@ -1038,11 +1026,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4A163DFE2BD95F68004F8658 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4A163DEA2BD95F67004F8658 /* Cobrowse App Clip */;
-			targetProxy = 4A163DFD2BD95F68004F8658 /* PBXContainerItemProxy */;
-		};
 		4A6DD5002B10F2190083EE2C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4A6DD4F82B10F2190083EE2C /* Broadcast Extension - SwiftUI */;
@@ -1100,7 +1083,7 @@
 					"@executable_path/Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.cobrowse.demo.app-clip";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1136,7 +1119,7 @@
 					"@executable_path/Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.cobrowse.demo.app-clip";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1469,18 +1452,20 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cobrowse/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Cobrowse;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = io.cobrowse.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1504,18 +1489,20 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cobrowse/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Cobrowse;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = io.cobrowse.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1585,12 +1572,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4A5FD1772C6E43FB00D03DC1 /* XCRemoteSwiftPackageReference "cobrowse-sdk-ios-binary" */ = {
+		4AAA77C52D4921B200F5829E /* XCRemoteSwiftPackageReference "cobrowse-sdk-ios-binary" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/cobrowseio/cobrowse-sdk-ios-binary.git";
+			repositoryURL = "https://github.com/cobrowseio/cobrowse-sdk-ios-binary";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.31.1;
+				minimumVersion = 3.0.0;
 			};
 		};
 		4AF1CD6829FA68A700261E25 /* XCRemoteSwiftPackageReference "Charts" */ = {
@@ -1609,30 +1596,30 @@
 			package = 4AF1CD6829FA68A700261E25 /* XCRemoteSwiftPackageReference "Charts" */;
 			productName = DGCharts;
 		};
-		4A5FD1782C6E43FB00D03DC1 /* CobrowseIO */ = {
+		4A75B8332D49268B009CD9DF /* CobrowseSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4A5FD1772C6E43FB00D03DC1 /* XCRemoteSwiftPackageReference "cobrowse-sdk-ios-binary" */;
-			productName = CobrowseIO;
+			package = 4AAA77C52D4921B200F5829E /* XCRemoteSwiftPackageReference "cobrowse-sdk-ios-binary" */;
+			productName = CobrowseSDK;
 		};
-		4A5FD17A2C6E43FB00D03DC1 /* CobrowseIOAppExtension */ = {
+		4A75B8352D492690009CD9DF /* CobrowseSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4A5FD1772C6E43FB00D03DC1 /* XCRemoteSwiftPackageReference "cobrowse-sdk-ios-binary" */;
-			productName = CobrowseIOAppExtension;
+			package = 4AAA77C52D4921B200F5829E /* XCRemoteSwiftPackageReference "cobrowse-sdk-ios-binary" */;
+			productName = CobrowseSDK;
 		};
-		4A5FD17C2C6E440D00D03DC1 /* CobrowseIO */ = {
+		4A75B8372D492694009CD9DF /* CobrowseSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4A5FD1772C6E43FB00D03DC1 /* XCRemoteSwiftPackageReference "cobrowse-sdk-ios-binary" */;
-			productName = CobrowseIO;
+			package = 4AAA77C52D4921B200F5829E /* XCRemoteSwiftPackageReference "cobrowse-sdk-ios-binary" */;
+			productName = CobrowseSDK;
 		};
-		4A5FD17E2C6E441300D03DC1 /* CobrowseIOAppExtension */ = {
+		4A75B8392D492699009CD9DF /* CobrowseSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4A5FD1772C6E43FB00D03DC1 /* XCRemoteSwiftPackageReference "cobrowse-sdk-ios-binary" */;
-			productName = CobrowseIOAppExtension;
+			package = 4AAA77C52D4921B200F5829E /* XCRemoteSwiftPackageReference "cobrowse-sdk-ios-binary" */;
+			productName = CobrowseSDK;
 		};
-		4A5FD1802C6E441800D03DC1 /* CobrowseIO */ = {
+		4A75B83B2D49269D009CD9DF /* CobrowseSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4A5FD1772C6E43FB00D03DC1 /* XCRemoteSwiftPackageReference "cobrowse-sdk-ios-binary" */;
-			productName = CobrowseIO;
+			package = 4AAA77C52D4921B200F5829E /* XCRemoteSwiftPackageReference "cobrowse-sdk-ios-binary" */;
+			productName = CobrowseSDK;
 		};
 		4AC85E0E2C19D491001338EF /* DGCharts */ = {
 			isa = XCSwiftPackageProductDependency;
