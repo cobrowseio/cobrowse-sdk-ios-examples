@@ -5,8 +5,7 @@
 
 import CobrowseSDK
 
-@available(iOS 13.0, *)
-@available(macOS 10.15, *)
+@available(iOS 13.0, macOS 10.15, *)
 public extension CBIOSession {
     @discardableResult
     func setFullDevice(state: CBIOFullDeviceState) async throws -> CBIOSession {
@@ -42,8 +41,7 @@ public extension CBIOSession {
     }
 }
 
-@available(iOS 13.0, *)
-@available(macOS 10.15, *)
+@available(iOS 13.0, macOS 10.15, *)
 enum CBErrorSessionBlock {
     static func process(_ error: Error?, with session: CBIOSession?, for continuation: CheckedContinuation<CBIOSession, any Error>) {
         switch (session, error) {
