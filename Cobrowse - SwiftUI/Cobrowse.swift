@@ -20,16 +20,12 @@ struct Cobrowse: App {
                 .onAppear {
                     let cobrowse = CobrowseIO.instance()
                     
-                    cobrowse.license = "tG4g9cexebTjGw"
+                    cobrowse.license = "trial"
                     
                     cobrowse.customData = [
                         CBIOUserEmailKey: "ios@example.com",
                         CBIODeviceNameKey: "iOS Demo"
                     ]
-                    
-//                    cobrowse.redactedViews = [
-//                        "#456"
-//                    ]
                     
                     cobrowse.webviewRedactedViews = [
                         "#title",
