@@ -27,13 +27,6 @@ struct Cobrowse: App {
                         CBIODeviceNameKey: "iOS Demo"
                     ]
                     
-                    cobrowse.webviewRedactedViews = [
-                        "#title",
-                        "#amount",
-                        "#subtitle",
-                        "#map"
-                    ]
-                    
                     cobrowse.delegate = session
                     
                     cobrowse.start()

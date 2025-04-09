@@ -24,6 +24,7 @@ extension Transaction {
                     Section(header: Text(date.string!)) {
                         ForEach(transactions) { transaction in
                             Item(for: transaction)
+                                .cobrowseSelector(tag: "Item")
                         }
                     }
                 }

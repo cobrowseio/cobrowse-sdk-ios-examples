@@ -19,6 +19,7 @@ struct AccountView: View {
             VStack {
                 
                 AccountView.Heading()
+                    .cobrowseSelector(tag: "Heading")
                 
                 Color("Background")
                     .ignoresSafeArea()
@@ -31,6 +32,7 @@ struct AccountView: View {
                             Text(string)
                                 .font(.largeTitle)
                                 .foregroundStyle(Color("Text"))
+                                .cobrowseSelector(tag: "Text")
                         }
                         
                         Button { CobrowseIO.instance().createSession() }
@@ -38,19 +40,23 @@ struct AccountView: View {
                                 Text("Get session code")
                                     .frame(minWidth: 200)
                                     .foregroundColor(Color("CBSecondary"))
+                                    .cobrowseSelector(tag: "Text")
                             }
                         .buttonStyle(.borderedProminent)
                         .tint(Color("CBPrimary"))
                         .accessibilityIdentifier("SESSION_CODE_BUTTON")
+                            .cobrowseSelector(tag: "Button", attributes: [ "accessibilityIdentifier" : "SESSION_CODE_BUTTON" ])
                         
                         NavigationLink(destination: AgentPresentView(isPresented: $isPresented)) {
                             Text("Agent Present Mode")
                                 .frame(minWidth: 200)
                                 .foregroundColor(Color("CBPrimary"))
+                                .cobrowseSelector(tag: "Text")
                         }
                         .buttonStyle(.borderedProminent)
                         .tint(Color("CBSecondary"))
                         .accessibilityIdentifier("AGENT_PRESENT_BUTTON")
+                            .cobrowseSelector(attributes: [ "accessibilityIdentifier" : "AGENT_PRESENT_BUTTON" ])
                     }
                     
                     Button("Logout") {
@@ -59,9 +65,11 @@ struct AccountView: View {
                     .tint(Color("CBPrimary"))
                     .padding(.top, 8)
                     .accessibilityIdentifier("LOGOUT_BUTTON")
+                        .cobrowseSelector(tag: "Button", attributes: [ "accessibilityIdentifier" : "LOGOUT_BUTTON" ])
 
                 }
                 .padding(.bottom, 20)
+                    .cobrowseSelector(tag: "VStack")
             }
             .background { Color("Background").ignoresSafeArea() }
             .navigationTitle("Account")
@@ -71,12 +79,15 @@ struct AccountView: View {
                     Button { isPresented = false }
                     label: {
                         Image(systemName: "xmark")
+                            .cobrowseSelector(tag: "Image")
                     }
                     .tint(Color("CBPrimary"))
                     .accessibilityIdentifier("CLOSE_BUTTON")
+                        .cobrowseSelector(tag: "Button", attributes: [ "accessibilityIdentifier" : "CLOSE_BUTTON" ])
                 }
             }
             .sessionToolbar()
+                .cobrowseSelector(tag: "VStack")
         }
         .onDisappear {
             guard let current = session.current, !current.isActive()
@@ -98,12 +109,15 @@ extension AccountView {
                     .frame(height: 120)
                     .foregroundColor(Color("CBPrimary"))
                     .accessibilityIdentifier("ACCOUNT_PROFILE_IMAGE")
+                    .cobrowseSelector(tag: "Image", attributes: [ "accessibilityIdentifier" : "ACCOUNT_PROFILE_IMAGE" ])
                 
                 Details(
                     name: "Frank Spencer",
                     email: "f.spencer@example.com"
                 )
+                    .cobrowseSelector(tag: "Details")
             }
+            .cobrowseSelector(tag: "VStack")
         }
     }
 }
@@ -120,12 +134,15 @@ extension AccountView.Heading {
                     .font(.largeTitle)
                     .foregroundStyle(Color("Text"))
                     .accessibilityIdentifier("ACCOUNT_NAME")
+                    .cobrowseSelector(tag: "Text", attributes: [ "accessibilityIdentifier" : "ACCOUNT_NAME" ])
                 
                 Text(verbatim: email)
                     .font(.title2)
                     .foregroundStyle(Color("Text"))
                     .accessibilityIdentifier("ACCOUNT_EMAIL")
+                    .cobrowseSelector(tag: "Text", attributes: [ "accessibilityIdentifier" : "ACCOUNT_EMAIL" ])
             }
+            .cobrowseSelector(tag: "VStack")
         }
     }
 }

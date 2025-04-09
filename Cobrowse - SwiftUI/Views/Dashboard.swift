@@ -25,6 +25,7 @@ struct Dashboard: View {
                     
                     Heading()
                         .padding(.top, shouldPresentTransactionsSheet ? offset : 0)
+                        .cobrowseSelector(tag: "Heading")
                     
                     if !shouldPresentTransactionsSheet {
                         Color.clear
@@ -35,6 +36,7 @@ struct Dashboard: View {
                                maxHeight: shouldPresentTransactionsSheet ? nil : max(geometry.size.height - offset, 0))
                         .aspectRatio(1, contentMode: .fill)
                         .padding(.horizontal, 6)
+                        .cobrowseSelector(tag: "PieChart")
                     
                     Spacer()
                     
@@ -53,18 +55,21 @@ struct Dashboard: View {
                                 }
                                 .sheet(isPresented: $isPresentingAccountSheet) {
                                     AccountView(isPresented: $isPresentingAccountSheet)
+                                        .cobrowseSelector(tag: "AccountView")
                                 }
                             }
                     } else {
                         Color("Background")
                             .sheet(isPresented: $isPresentingAccountSheet) {
                                 AccountView(isPresented: $isPresentingAccountSheet)
+                                    .cobrowseSelector(tag: "AccountView")
                             }
                     }
                 }
                 .background {
                     Color("Background")
                 }
+                .cobrowseSelector(tag: "VStack")
             }
             .ignoresSafeArea()
         }
@@ -73,9 +78,11 @@ struct Dashboard: View {
                 Button { isPresentingAccountSheet = true }
                 label: {
                     Image(systemName: "person.crop.circle")
+                        .cobrowseSelector(tag: "Image")
                 }
                 .tint(Color("CBPrimary"))
                 .accessibilityIdentifier("ACCOUNT_BUTTON")
+                    .cobrowseSelector(tag: "Button", attributes: [ "accessibilityIdentifier" : "ACCOUNT_BUTTON" ])
             }
         }
         .sessionToolbar()
@@ -95,6 +102,7 @@ extension Dashboard {
                     .font(.title3)
                     .foregroundStyle(Color("Text"))
                     .cobrowseRedacted()
+                    .cobrowseSelector(tag: "Text")
                 
                 if let accountBalance = account.balance.currencyString {
                     Text(accountBalance)
@@ -102,8 +110,10 @@ extension Dashboard {
                         .foregroundStyle(Color("CBPrimary"))
                         .accessibilityIdentifier("ACCOUNT_BALANCE")
                         .cobrowseRedacted()
+                        .cobrowseSelector(tag: "Text", attributes: [ "accessibilityIdentifier" : "ACCOUNT_BALANCE" ])
                 }
             }
+            .cobrowseSelector(tag: "VStack")
         }
     }
 }
