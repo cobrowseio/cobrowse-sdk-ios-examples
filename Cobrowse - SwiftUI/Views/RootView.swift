@@ -16,6 +16,7 @@ struct RootView: View {
             if horizontalSizeClass == .compact {
                 NavigationStack {
                     Dashboard(shouldPresentTransactionsSheet: true)
+                        .cobrowseSelector(tag: "Dashboard")
                 }
             } else {
                 NavigationSplitView {
@@ -23,11 +24,13 @@ struct RootView: View {
                 } detail: {
                     NavigationStack {
                         Dashboard(shouldPresentTransactionsSheet: false)
+                            .cobrowseSelector(tag: "Dashboard")
                     }
                 }
             }
         } else {
             SignIn()
+                .cobrowseSelector(tag: "SignIn")
         }
     }
 }

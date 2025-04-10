@@ -20,9 +20,11 @@ struct SessionToolbar: ViewModifier {
                         ToolbarItem(placement: .topBarTrailing) {
                             Button(action: { session.end() }) {
                                 Image(systemName: "rectangle.badge.xmark")
+                                    .cobrowseSelector(tag: "Image")
                             }
                             .tint(Color("CBPrimary"))
                             .accessibilityIdentifier("SESSION_END_BUTTON")
+                                .cobrowseSelector(tag: "Button", attributes: [ "accessibilityIdentifier" : "SESSION_END_BUTTON" ])
                         }
                     }
                 }

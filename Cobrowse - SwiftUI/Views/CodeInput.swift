@@ -69,6 +69,7 @@ struct CodeInput: View {
                 code = codeValues.joined()
             }
         })
+            .cobrowseSelector(tag: "HStack")
     }
 }
 

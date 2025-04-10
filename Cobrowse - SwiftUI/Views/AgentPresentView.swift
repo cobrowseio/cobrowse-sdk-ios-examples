@@ -22,10 +22,12 @@ struct AgentPresentView: View {
                     Text("You are now presenting")
                         .font(.title2)
                         .foregroundStyle(Color("Text"))
+                        .cobrowseSelector(tag: "Text")
                     
                     Image(systemName: "rectangle.inset.filled.and.person.filled")
                         .font(.system(size: 120, weight: .thin))
                         .foregroundColor(Color("CBPrimary"))
+                        .cobrowseSelector(tag: "Image")
                     
                     Color("Background")
                 } else {
@@ -33,6 +35,7 @@ struct AgentPresentView: View {
                         Text("Please enter your present code")
                             .font(.title2)
                             .foregroundStyle(Color("Text"))
+                            .cobrowseSelector(tag: "Text")
                         
                         CodeInput(code: $code)
                             .shake($shouldShake) {
@@ -53,9 +56,11 @@ struct AgentPresentView: View {
                                     }
                                 }
                             })
+                            .cobrowseSelector(tag: "CodeInput")
                         
                         Color("Background")
                     }
+                    .cobrowseSelector(tag: "VStack")
                 }
             }
             .padding(.top, 30)
@@ -67,11 +72,14 @@ struct AgentPresentView: View {
                     Button { isPresented = false }
                     label: {
                         Image(systemName: "xmark")
+                            .cobrowseSelector(tag: "Image")
                     }
                     .tint(Color("CBPrimary"))
                     .accessibilityIdentifier("CLOSE_BUTTON")
+                        .cobrowseSelector(tag: "Button", attributes: [ "accessibilityIdentifier" : "CLOSE_BUTTON" ])
                 }
             }
             .sessionToolbar()
+                .cobrowseSelector(tag: "VStack")
         }
 }

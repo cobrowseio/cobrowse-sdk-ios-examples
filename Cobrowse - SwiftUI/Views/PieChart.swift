@@ -42,19 +42,22 @@ struct PieChart: View {
                 Text("Spent")
                     .font(.subheadline)
                     .foregroundStyle(Color("Text"))
+                    .cobrowseSelector(tag: "Text")
                 
                 if let totalSpent = recentTransactions.totalSpent.currencyString {
                     Text(totalSpent)
                         .font(.title)
                         .foregroundStyle(Color("CBPrimary"))
                         .accessibilityIdentifier("TOTAL_SPENT")
-                        .cobrowseRedacted()
+                        .cobrowseSelector(tag: "Text", attributes: [ "accessibilityIdentifier" : "TOTAL_SPENT" ])
                 }
                 
                 Text("This month")
                     .font(.subheadline)
                     .foregroundStyle(Color("Text"))
+                    .cobrowseSelector(tag: "Text")
             }
+            .cobrowseSelector(tag: "VStack")
         })
         .chartLegend(.hidden)
         .chartForegroundStyleScale(domain: .automatic, range: recentTransactionsByCategory.map { $0.key.color })

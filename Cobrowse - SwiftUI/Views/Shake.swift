@@ -69,6 +69,7 @@ extension View {
         } onCompletion: {
             onCompletion?()
         }
+        .cobrowseSelector(tag: "Shake")
     }
 
     func animate(duration: CGFloat, _ execute: @escaping () -> Void) async {

@@ -39,6 +39,7 @@ struct SignIn: View {
                 
                 Text("Please enter your details")
                     .foregroundStyle(Color("Text"))
+                    .cobrowseSelector(tag: "Text")
                 
                 VStack(spacing: 4) {
                     TextField("Username", text: $username)
@@ -47,7 +48,7 @@ struct SignIn: View {
                         .focused($focusField, equals: .username)
                         .onSubmit { signIn() }
                         .accessibilityIdentifier("INPUT_USERNAME")
-                        .cobrowseRedacted()
+                        .cobrowseSelector(tag: "TextField", attributes: [ "accessibilityIdentifier" : "INPUT_USERNAME" ])
                     
                     SecureField("Password", text: $password)
                         .textFieldStyle(.roundedBorder)
@@ -55,10 +56,11 @@ struct SignIn: View {
                         .focused($focusField, equals: .password)
                         .onSubmit { signIn() }
                         .accessibilityIdentifier("INPUT_PASSWORD")
-                        .cobrowseRedacted()
+                        .cobrowseSelector(tag: "SecureField", attributes: [ "accessibilityIdentifier" : "INPUT_PASSWORD" ])
                 }
                 .padding(.horizontal, 16)
                 .frame(maxWidth: 500)
+                    .cobrowseSelector(tag: "VStack")
                 
                 Button {
                     signIn()
@@ -67,16 +69,19 @@ struct SignIn: View {
                         .fontWeight(.semibold)
                         .frame(minWidth: 120)
                         .foregroundColor(Color(invalidField == nil ? "CBSecondary" : "Text"))
+                        .cobrowseSelector(tag: "Text")
                 }
                 .buttonStyle(.borderedProminent)
                 .disabled(invalidField != nil)
                 .padding(.top, 16)
                 .accessibilityIdentifier("SIGN_IN_BUTTON")
+                    .cobrowseSelector(tag: "Button", attributes: [ "accessibilityIdentifier" : "SIGN_IN_BUTTON" ])
                 
                 Spacer()
             }
             .background { Color("Background").ignoresSafeArea() }
             .sessionToolbar()
+                .cobrowseSelector(tag: "VStack")
         }
 
     }
