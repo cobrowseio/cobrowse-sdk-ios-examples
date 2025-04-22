@@ -13,7 +13,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-14
+    runs-on: macos-15
     steps:
       - name: Checkout the code
         uses: actions/checkout@v2
@@ -24,10 +24,8 @@ jobs:
       - name: Find SDK version
         run: |
           echo "COBROWSE_VERSION=$(cat Cobrowse.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved | grep -A 4 'cobrowse-sdk-ios-binary' | awk '/version/ {print $3}' | tr -d '"')" >> $GITHUB_ENV
-      - name: Set Xcode version
-        run: sudo xcode-select -s /Applications/Xcode_15.4.app/Contents/Developer
-      - name: Print Xcode version
-        run: xcodebuild -version
+      - name: Select Xcode version
+        uses: ./.github/actions/select-xcode-version
       - name: Build the app
         run: xcodebuild -project Cobrowse.xcodeproj -scheme "Cobrowse - SwiftUI" -sdk iphonesimulator -destination "generic/platform=iOS Simulator" -derivedDataPath "./build" build | xcpretty
       - name: Create app archive

@@ -1,0 +1,21 @@
+name: Select Xcode version
+description: Select the Xcode version to be used to compile the SDK
+
+runs:
+  using: "composite"
+  steps:
+
+    # The SDK uses the lowest Xcode version allowed to be used in AppStore:
+    # - Starting April 24, 2025, all iOS and iPadOS apps must be built with the iOS 18 SDK or later,
+    #   included in Xcode 16 or later
+    # https://developer.apple.com/ios/submit/
+    #
+    # List of available Xcode versions can be found here:
+    # https://github.com/actions/runner-images/blob/main/images/macos/macos-15-Readme.md#xcode
+    - name: Select Xcode version
+      env:
+        XCODE_SELECTED_PATH: "/Applications/Xcode_16.0.app"
+      shell: bash
+      run: |
+        sudo xcode-select --switch ${XCODE_SELECTED_PATH}
+        xcodebuild -version

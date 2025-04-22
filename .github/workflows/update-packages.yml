@@ -12,11 +12,14 @@ concurrency:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: macos-15
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
+
+    - name: Select Xcode version
+      uses: ./.github/actions/select-xcode-version
 
     # Remove the Package.resolved file and don't use any cached packages to cause all packages to update
     - name: Update packages
