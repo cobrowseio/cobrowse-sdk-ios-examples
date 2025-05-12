@@ -11,15 +11,9 @@ class CobrowseSession: NSObject, ObservableObject, CobrowseIODelegate {
     
     @Published var current: CBIOSession?
     @Published var controlState: CobrowseSession.Control.State = .hidden
-    
-    @UserDefault(key: "redactionByDefault", defaultValue: false)
-    var redactionByDefault: Bool {
-        didSet {
-            isRedactionByDefaultEnabled = redactionByDefault
-        }
-    }
 
-    @Published var isRedactionByDefaultEnabled: Bool = false
+    @UserDefault(key: "isRedactionByDefaultEnabled", defaultValue: false)
+    var isRedactionByDefaultEnabled: Bool
     
     func cobrowseSessionDidUpdate(_ session: CBIOSession) {
         current = session
