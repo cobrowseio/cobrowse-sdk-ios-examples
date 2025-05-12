@@ -11,8 +11,6 @@ struct AgentPresentView: View {
     
     @EnvironmentObject private var cobrowseSession: CobrowseSession
     
-    @Binding var isPresented: Bool
-    
     @State var code: String?
     @State var shouldShake = false
     
@@ -62,7 +60,7 @@ struct AgentPresentView: View {
             .background { Color("Background").ignoresSafeArea() }
             .navigationTitle("Agent Present")
             .navigationBarTitleDisplayMode(.inline)
-            .closeModelToolBar(isPresented: $isPresented)
+            .closeModelToolBar()
             .sessionToolbar()
         }
 }

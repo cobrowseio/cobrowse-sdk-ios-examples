@@ -3,11 +3,10 @@ import SafariServices
 
 struct SettingsView: View {
     
-    @Binding var isPresented: Bool
     @State private var showingPrivacyPolicy = false
     
     private let settings: [CobrowseSession.Setting] = [
-        .init(title: "Redaction by default", keyPath: \.redactionByDefault),
+        .init(title: "Redaction by default", keyPath: \.isRedactionByDefaultEnabled),
     ]
 
     var body: some View {
@@ -15,14 +14,18 @@ struct SettingsView: View {
             ForEach(settings) { setting in
                 Toggle(setting.title, isOn: setting.binding)
             }
+            .padding(.horizontal, 20)
+            
             Spacer()
+            
             Button("Privacy Policy") {
                 showingPrivacyPolicy = true
             }
         }
-        .padding(.horizontal, 20)
+        .frame(maxWidth: .infinity)
+        .background { Color("Background").ignoresSafeArea() }
         .navigationTitle("Settings")
-        .closeModelToolBar(isPresented: $isPresented)
+        .closeModelToolBar()
         .sheet(isPresented: $showingPrivacyPolicy) {
             SafariView(url: "https://cobrowse.io/privacy")
         }

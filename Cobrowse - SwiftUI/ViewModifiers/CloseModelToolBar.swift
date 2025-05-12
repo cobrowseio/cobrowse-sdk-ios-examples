@@ -9,36 +9,34 @@ struct CloseModelToolBar: ViewModifier {
 
     @EnvironmentObject private var cobrowseSession: CobrowseSession
     
-    @Binding var isPresented: Bool
+    @State var closeModel: Bool = false
     
     func body(content: Content) -> some View {
         content
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button { isPresented = false }
-                    label: {
-                        Image(systemName: "xmark")
-                    }
-                    .tint(Color("CBPrimary"))
-                    .accessibilityIdentifier("CLOSE_BUTTON")
+                    Button { closeModel = true }
+                    label: { Image(systemName: "xmark") }
+                        .tint(Color("CBPrimary"))
+                        .accessibilityIdentifier("CLOSE_BUTTON")
                 }
             }
+            .preference(key: CloseModelKey.self, value: closeModel)
     }
 }
 
 extension View {
-    func closeModelToolBar(isPresented: Binding<Bool>) -> some View {
-        self.modifier(CloseModelToolBar(isPresented: isPresented))
+    
+    func closeModelToolBar() -> some View {
+        self.modifier(CloseModelToolBar())
     }
 }
 
-private struct IsPresentingModalKey: EnvironmentKey {
+struct CloseModelKey: PreferenceKey {
+    
     static let defaultValue: Bool = false
-}
-
-extension EnvironmentValues {
-    var isPresentingModal: Bool {
-        get { self[IsPresentingModalKey.self] }
-        set { self[IsPresentingModalKey.self] = newValue }
+    
+    static func reduce(value: inout Bool, nextValue: () -> Bool) {
+        value = value || nextValue()
     }
 }

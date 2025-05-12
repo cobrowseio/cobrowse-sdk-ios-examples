@@ -10,7 +10,6 @@ import CobrowseSDK
 struct AccountView: View {
     
     @EnvironmentObject private var cobrowseSession: CobrowseSession
-    @EnvironmentObject private var account: Account
     
     @Binding var isPresented: Bool
 
@@ -19,52 +18,19 @@ struct AccountView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                
-                AccountView.Heading()
-                
-                Color("Background")
-                    .ignoresSafeArea()
+                Heading()
+
+                Spacer()
                 
                 VStack {
-                    
-                    if !(cobrowseSession.current?.isActive() ?? false) {
-                        if let code = cobrowseSession.current?.code() {
-                            let string = "\(code.prefix(3)) - \(code.suffix(3))"
-                            Text(string)
-                                .font(.largeTitle)
-                                .foregroundStyle(Color("Text"))
-                        }
-                        
-                        Button { CobrowseIO.instance().createSession() }
-                            label: {
-                                Text("Get session code")
-                                    .frame(minWidth: 200)
-                                    .foregroundColor(Color("CBSecondary"))
-                            }
-                        .buttonStyle(.borderedProminent)
-                        .tint(Color("CBPrimary"))
-                        .accessibilityIdentifier("SESSION_CODE_BUTTON")
-                        
-                        NavigationLink(destination: AgentPresentView(isPresented: $isPresented)) {
-                            Text("Agent Present Mode")
-                                .frame(minWidth: 200)
-                                .foregroundColor(Color("CBPrimary"))
-                        }
-                        .buttonStyle(.borderedProminent)
-                        .tint(Color("CBSecondary"))
-                        .accessibilityIdentifier("AGENT_PRESENT_BUTTON")
-                    }
-                    
-                    Button("Logout") {
-                        account.isSignedIn = false
-                    }
-                    .tint(Color("CBPrimary"))
-                    .padding(.top, 8)
-                    .accessibilityIdentifier("LOGOUT_BUTTON")
-
+                    Actions.SessionCode()
+                    Actions.AgentPresent()
+                    Actions.Logout()
                 }
+                
                 .padding(.bottom, 20)
             }
+            .frame(maxWidth: .infinity)
             .background { Color("Background").ignoresSafeArea() }
             .navigationTitle("Account")
             .navigationBarTitleDisplayMode(.inline)
@@ -79,9 +45,9 @@ struct AccountView: View {
                 }
             }
             .navigationDestination(isPresented: $showSettings, destination: {
-                SettingsView(isPresented: $isPresented)
+                SettingsView()
             })
-            .closeModelToolBar(isPresented: $isPresented)
+            .closeModelToolBar()
             .sessionToolbar()
         }
         .onDisappear {
@@ -89,6 +55,9 @@ struct AccountView: View {
             else { return }
             
             cobrowseSession.current = nil
+        }
+        .onPreferenceChange(CloseModelKey.self) {
+            isPresented = !$0
         }
     }
 }
@@ -132,6 +101,67 @@ extension AccountView.Heading {
                     .foregroundStyle(Color("Text"))
                     .accessibilityIdentifier("ACCOUNT_EMAIL")
                     .cobrowseRedacted()
+            }
+        }
+    }
+}
+
+
+extension AccountView {
+    
+    enum Actions {
+        
+        struct SessionCode: View {
+            
+            @EnvironmentObject private var cobrowseSession: CobrowseSession
+            
+            var body: some View {
+                VStack {
+                    if let code = cobrowseSession.current?.code() {
+                        let string = "\(code.prefix(3)) - \(code.suffix(3))"
+                        Text(string)
+                            .font(.largeTitle)
+                            .foregroundStyle(Color("Text"))
+                    }
+                    
+                    Button { CobrowseIO.instance().createSession() }
+                    label: {
+                        Text("Get session code")
+                            .frame(minWidth: 200)
+                            .foregroundColor(Color("CBSecondary"))
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .tint(Color("CBPrimary"))
+                    .accessibilityIdentifier("SESSION_CODE_BUTTON")
+                }
+            }
+        }
+        
+        struct AgentPresent: View {
+            
+            var body: some View {
+                NavigationLink(destination: AgentPresentView()) {
+                    Text("Agent Present Mode")
+                        .frame(minWidth: 200)
+                        .foregroundColor(Color("CBPrimary"))
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(Color("CBSecondary"))
+                .accessibilityIdentifier("AGENT_PRESENT_BUTTON")
+            }
+        }
+        
+        struct Logout: View {
+            
+            @EnvironmentObject private var account: Account
+            
+            var body: some View {
+                Button("Logout") {
+                    account.isSignedIn = false
+                }
+                .tint(Color("CBPrimary"))
+                .padding(.top, 8)
+                .accessibilityIdentifier("LOGOUT_BUTTON")
             }
         }
     }

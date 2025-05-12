@@ -10,10 +10,9 @@ struct Dashboard: View {
     @State var shouldPresentTransactionsSheet: Bool
     @State private var transactionDetent = Transaction.Detent.State(.collapsed)
     
-    @State private var isPresentingAccountSheet = false
+    @State private var isPresenting = false
     
     @EnvironmentObject private var account: Account
-    
     
     private let offset = 65.0
     
@@ -49,14 +48,14 @@ struct Dashboard: View {
                                         let fractionHeight = (geometry.size.height - offset) * 0.9
                                         transactionDetent.current = height > fractionHeight ? .large : .fraction
                                     }
-                                    .sheet(isPresented: $isPresentingAccountSheet) {
-                                        AccountView(isPresented: $isPresentingAccountSheet)
+                                    .sheet(isPresented: $isPresenting) {
+                                        AccountView(isPresented: $isPresenting)
                                     }
                             }
                     } else {
                         Color("Background")
-                            .sheet(isPresented: $isPresentingAccountSheet) {
-                                AccountView(isPresented: $isPresentingAccountSheet)
+                            .sheet(isPresented: $isPresenting) {
+                                AccountView(isPresented: $isPresenting)
                             }
                     }
                 }
@@ -68,7 +67,7 @@ struct Dashboard: View {
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button { isPresentingAccountSheet = true }
+                Button { isPresenting = true }
                 label: {
                     Image(systemName: "person.crop.circle")
                 }
