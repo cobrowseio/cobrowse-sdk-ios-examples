@@ -14,6 +14,8 @@ struct AccountView: View {
     
     @Binding var isPresented: Bool
 
+    @State private var showSettings = false
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -67,15 +69,19 @@ struct AccountView: View {
             .navigationTitle("Account")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button { isPresented = false }
+                ToolbarItem(placement: .topBarLeading) {
+                    Button { showSettings = true }
                     label: {
-                        Image(systemName: "xmark")
+                        Image(systemName: "gearshape")
                     }
                     .tint(Color("CBPrimary"))
-                    .accessibilityIdentifier("CLOSE_BUTTON")
+                    .accessibilityIdentifier("SETTINGS_BUTTON")
                 }
             }
+            .navigationDestination(isPresented: $showSettings, destination: {
+                SettingsView(isPresented: $isPresented)
+            })
+            .closeModelToolBar(isPresented: $isPresented)
             .sessionToolbar()
         }
         .onDisappear {

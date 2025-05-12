@@ -42,16 +42,16 @@ struct Dashboard: View {
                             .sheet(isPresented: $shouldPresentTransactionsSheet) {
                                 
                                 Transaction.List(transactions: account.transactions)
-                                .presentationDetents([.fraction(0.40), .large])
-                                .presentationBackgroundInteraction(.enabled(upThrough: .fraction(0.40)))
-                                .interactiveDismissDisabled()
-                                .onHeightChange { height in
-                                    let fractionHeight = (geometry.size.height - offset) * 0.9
-                                    transactionDetent.current = height > fractionHeight ? .large : .fraction
-                                }
-                                .sheet(isPresented: $isPresentingAccountSheet) {
-                                    AccountView(isPresented: $isPresentingAccountSheet)
-                                }
+                                    .presentationDetents([.fraction(0.40), .large])
+                                    .presentationBackgroundInteraction(.enabled(upThrough: .fraction(0.40)))
+                                    .interactiveDismissDisabled()
+                                    .onHeightChange { height in
+                                        let fractionHeight = (geometry.size.height - offset) * 0.9
+                                        transactionDetent.current = height > fractionHeight ? .large : .fraction
+                                    }
+                                    .sheet(isPresented: $isPresentingAccountSheet) {
+                                        AccountView(isPresented: $isPresentingAccountSheet)
+                                    }
                             }
                     } else {
                         Color("Background")

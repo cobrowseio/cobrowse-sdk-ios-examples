@@ -58,20 +58,11 @@ struct AgentPresentView: View {
                     }
                 }
             }
-            .padding(.top, 30)
+            .padding(30)
             .background { Color("Background").ignoresSafeArea() }
             .navigationTitle("Agent Present")
             .navigationBarTitleDisplayMode(.inline)
-            .toolbar {                
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button { isPresented = false }
-                    label: {
-                        Image(systemName: "xmark")
-                    }
-                    .tint(Color("CBPrimary"))
-                    .accessibilityIdentifier("CLOSE_BUTTON")
-                }
-            }
+            .closeModelToolBar(isPresented: $isPresented)
             .sessionToolbar()
         }
 }
