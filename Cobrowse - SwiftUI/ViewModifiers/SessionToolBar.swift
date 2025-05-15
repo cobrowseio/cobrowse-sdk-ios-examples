@@ -21,7 +21,7 @@ struct SessionToolbar: ViewModifier {
                         ToolbarItem(placement: .topBarTrailing) {
                             Button { session.end() }
                             label: { Image(systemName: "rectangle.badge.xmark") }
-                            .tint(Color("CBPrimary"))
+                            .tint(Color.cbPrimary)
                             .accessibilityIdentifier("SESSION_END_BUTTON")
                             .cobrowseUnredacted(if: unredact)
                         }

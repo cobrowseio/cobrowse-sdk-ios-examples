@@ -35,7 +35,7 @@ struct AccountView: View {
                 .padding(.bottom, 20)
             }
             .frame(maxWidth: .infinity)
-            .background { Color("Background").ignoresSafeArea() }
+            .background { Color.background.ignoresSafeArea() }
             .navigationTitle("Account")
             .navigationBarTitleDisplayMode(.inline)
             .navigationDestination(isPresented: $showSettings, destination: {
@@ -47,7 +47,7 @@ struct AccountView: View {
                     label: {
                         Image(systemName: "gearshape")
                     }
-                    .tint(Color("CBPrimary"))
+                    .tint(Color.cbPrimary)
                     .accessibilityIdentifier("SETTINGS_BUTTON")
                     .cobrowseUnredacted()
                 }
@@ -77,7 +77,7 @@ extension AccountView {
                     .resizable()
                     .aspectRatio(1, contentMode: .fit)
                     .frame(height: 120)
-                    .foregroundColor(Color("CBPrimary"))
+                    .foregroundColor(Color.cbPrimary)
                     .accessibilityIdentifier("ACCOUNT_PROFILE_IMAGE")
                 
                 Details(
@@ -101,12 +101,12 @@ extension AccountView.Heading {
             VStack(spacing: 2) {
                 Text(name)
                     .font(.largeTitle)
-                    .foregroundStyle(Color("Text"))
+                    .foregroundStyle(Color.text)
                     .accessibilityIdentifier("ACCOUNT_NAME")
                 
                 Text(verbatim: email)
                     .font(.title2)
-                    .foregroundStyle(Color("Text"))
+                    .foregroundStyle(Color.text)
                     .accessibilityIdentifier("ACCOUNT_EMAIL")
                     .cobrowseRedacted()
             }
@@ -130,17 +130,17 @@ extension AccountView {
                         let string = "\(code.prefix(3)) - \(code.suffix(3))"
                         Text(string)
                             .font(.largeTitle)
-                            .foregroundStyle(Color("Text"))
+                            .foregroundStyle(Color.text)
                     }
                     
                     Button { CobrowseIO.instance().createSession() }
                     label: {
                         Text("Get session code")
                             .frame(minWidth: 200)
-                            .foregroundColor(Color("CBSecondary"))
+                            .foregroundColor(Color.cbSecondary)
                     }
                     .buttonStyle(.borderedProminent)
-                    .tint(Color("CBPrimary"))
+                    .tint(Color.cbPrimary)
                     .accessibilityIdentifier("SESSION_CODE_BUTTON")
                 }
             }
@@ -152,10 +152,10 @@ extension AccountView {
                 NavigationLink(destination: AgentPresentView()) {
                     Text("Agent Present Mode")
                         .frame(minWidth: 200)
-                        .foregroundColor(Color("CBPrimary"))
+                        .foregroundColor(Color.cbPrimary)
                 }
                 .buttonStyle(.borderedProminent)
-                .tint(Color("CBSecondary"))
+                .tint(Color.cbSecondary)
                 .accessibilityIdentifier("AGENT_PRESENT_BUTTON")
             }
         }
@@ -168,7 +168,7 @@ extension AccountView {
                 Button("Logout") {
                     account.isSignedIn = false
                 }
-                .tint(Color("CBPrimary"))
+                .tint(Color.cbPrimary)
                 .padding(.top, 8)
                 .accessibilityIdentifier("LOGOUT_BUTTON")
             }

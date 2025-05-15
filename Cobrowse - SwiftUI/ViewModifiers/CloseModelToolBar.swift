@@ -19,7 +19,7 @@ struct CloseModelToolBar: ViewModifier {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button { closeModel = true }
                     label: { Image(systemName: "xmark") }
-                        .tint(Color("CBPrimary"))
+                        .tint(Color.cbPrimary)
                         .accessibilityIdentifier("CLOSE_BUTTON")
                         .cobrowseUnredacted(if: unredact)
                 }

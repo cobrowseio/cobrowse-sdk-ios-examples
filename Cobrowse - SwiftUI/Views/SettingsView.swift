@@ -14,6 +14,7 @@ struct SettingsView: View {
         VStack(spacing: 10) {
             ForEach(settings) { setting in
                 Toggle(setting.title, isOn: setting.binding)
+                    .tint(Color.cbPrimary)
             }
             .padding(.horizontal, 20)
             
@@ -25,7 +26,7 @@ struct SettingsView: View {
             .accessibilityIdentifier("PRIVACY_POLICY_BUTTON")
         }
         .frame(maxWidth: .infinity)
-        .background { Color("Background").ignoresSafeArea() }
+        .background { Color.background.ignoresSafeArea() }
         .navigationTitle("Settings")
         .closeModelToolBar()
         .sessionToolbar()

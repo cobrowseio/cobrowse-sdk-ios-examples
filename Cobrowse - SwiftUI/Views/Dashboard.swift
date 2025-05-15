@@ -37,7 +37,7 @@ struct Dashboard: View {
                     Spacer()
                     
                     if shouldPresentTransactionsSheet {
-                        Color("Background")
+                        Color.background
                             .sheet(isPresented: $shouldPresentTransactionsSheet) {
                                 
                                 Transaction.List(transactions: account.transactions)
@@ -53,14 +53,14 @@ struct Dashboard: View {
                                     }
                             }
                     } else {
-                        Color("Background")
+                        Color.background
                             .sheet(isPresented: $isPresenting) {
                                 AccountView(isPresented: $isPresenting)
                             }
                     }
                 }
                 .background {
-                    Color("Background")
+                    Color.background
                 }
             }
             .ignoresSafeArea()
@@ -71,7 +71,7 @@ struct Dashboard: View {
                 label: {
                     Image(systemName: "person.crop.circle")
                 }
-                .tint(Color("CBPrimary"))
+                .tint(Color.cbPrimary)
                 .accessibilityIdentifier("ACCOUNT_BUTTON")
             }
         }
@@ -89,12 +89,12 @@ extension Dashboard {
             VStack(spacing: 6) {
                 Text("Balance")
                     .font(.title3)
-                    .foregroundStyle(Color("Text"))
+                    .foregroundStyle(Color.text)
                 
                 if let accountBalance = account.balance.currencyString {
                     Text(accountBalance)
                         .font(.title)
-                        .foregroundStyle(Color("CBPrimary"))
+                        .foregroundStyle(Color.cbPrimary)
                         .accessibilityIdentifier("ACCOUNT_BALANCE")
                         .cobrowseRedacted()
                 }

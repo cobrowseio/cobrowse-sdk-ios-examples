@@ -19,18 +19,18 @@ struct AgentPresentView: View {
                 if let session = cobrowseSession.current, session.isActive() {
                     Text("You are now presenting")
                         .font(.title2)
-                        .foregroundStyle(Color("Text"))
+                        .foregroundStyle(Color.text)
                     
                     Image(systemName: "rectangle.inset.filled.and.person.filled")
                         .font(.system(size: 120, weight: .thin))
-                        .foregroundColor(Color("CBPrimary"))
+                        .foregroundColor(Color.cbPrimary)
                     
-                    Color("Background")
+                    Color.background
                 } else {
                     VStack(spacing: 16) {
                         Text("Please enter your present code")
                             .font(.title2)
-                            .foregroundStyle(Color("Text"))
+                            .foregroundStyle(Color.text)
                         
                         CodeInput(code: $code)
                             .shake($shouldShake) {
@@ -52,12 +52,12 @@ struct AgentPresentView: View {
                                 }
                             })
                         
-                        Color("Background")
+                        Color.background
                     }
                 }
             }
             .padding(30)
-            .background { Color("Background").ignoresSafeArea() }
+            .background { Color.background.ignoresSafeArea() }
             .navigationTitle("Agent Present")
             .navigationBarTitleDisplayMode(.inline)
             .closeModelToolBar()

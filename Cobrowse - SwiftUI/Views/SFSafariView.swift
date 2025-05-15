@@ -5,7 +5,10 @@ struct SafariView: UIViewControllerRepresentable {
     let url: String
 
     func makeUIViewController(context: Context) -> some UIViewController {
-        return SFSafariViewController(url: URL(string: url)!)
+        let vc = SFSafariViewController(url: URL(string: url)!)
+        vc.preferredControlTintColor = UIColor.cbPrimary
+        
+        return vc
     }
     
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) { }
