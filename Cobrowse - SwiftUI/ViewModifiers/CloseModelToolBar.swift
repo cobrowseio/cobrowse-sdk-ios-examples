@@ -7,6 +7,8 @@ import SwiftUI
 
 struct CloseModelToolBar: ViewModifier {
 
+    fileprivate let unredact: Bool
+    
     @EnvironmentObject private var cobrowseSession: CobrowseSession
     
     @State var closeModel: Bool = false
@@ -19,6 +21,7 @@ struct CloseModelToolBar: ViewModifier {
                     label: { Image(systemName: "xmark") }
                         .tint(Color("CBPrimary"))
                         .accessibilityIdentifier("CLOSE_BUTTON")
+                        .cobrowseUnredacted(if: unredact)
                 }
             }
             .preference(key: CloseModelKey.self, value: closeModel)
@@ -27,8 +30,8 @@ struct CloseModelToolBar: ViewModifier {
 
 extension View {
     
-    func closeModelToolBar() -> some View {
-        self.modifier(CloseModelToolBar())
+    func closeModelToolBar(unredact: Bool = false) -> some View {
+        self.modifier(CloseModelToolBar(unredact: unredact))
     }
 }
 

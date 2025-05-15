@@ -19,21 +19,28 @@ struct AccountView: View {
         NavigationStack {
             VStack {
                 Heading()
+                    .cobrowseSelector(tag: "Heading")
 
                 Spacer()
                 
                 VStack {
-                    Actions.SessionCode()
-                    Actions.AgentPresent()
+                    if !(cobrowseSession.current?.isActive() ?? false) {
+                        Actions.SessionCode()
+                        Actions.AgentPresent()
+                    }
+                    
                     Actions.Logout()
+                        .cobrowseUnredacted()
                 }
-                
                 .padding(.bottom, 20)
             }
             .frame(maxWidth: .infinity)
             .background { Color("Background").ignoresSafeArea() }
             .navigationTitle("Account")
             .navigationBarTitleDisplayMode(.inline)
+            .navigationDestination(isPresented: $showSettings, destination: {
+                SettingsView()
+            })
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button { showSettings = true }
@@ -42,17 +49,16 @@ struct AccountView: View {
                     }
                     .tint(Color("CBPrimary"))
                     .accessibilityIdentifier("SETTINGS_BUTTON")
+                    .cobrowseUnredacted()
                 }
             }
-            .navigationDestination(isPresented: $showSettings, destination: {
-                SettingsView()
-            })
-            .closeModelToolBar()
-            .sessionToolbar()
+            .closeModelToolBar(unredact: true)
+            .sessionToolbar(unredact: true)
+            .cobrowseRedacted(if: cobrowseSession.$privateByDefault)
         }
         .onDisappear {
             guard let current = cobrowseSession.current, !current.isActive()
-            else { return }
+                else { return }
             
             cobrowseSession.current = nil
         }
@@ -86,6 +92,8 @@ extension AccountView {
 extension AccountView.Heading {
     struct Details: View {
         
+        @EnvironmentObject private var cobrowseSession: CobrowseSession
+        
         let name: String
         let email: String
         
@@ -102,6 +110,7 @@ extension AccountView.Heading {
                     .accessibilityIdentifier("ACCOUNT_EMAIL")
                     .cobrowseRedacted()
             }
+            .cobrowseSelector(tag: "VStack")
         }
     }
 }

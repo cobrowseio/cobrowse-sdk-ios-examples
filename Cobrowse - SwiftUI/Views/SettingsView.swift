@@ -1,12 +1,13 @@
 import SwiftUI
 import SafariServices
+import CobrowseSDK
 
 struct SettingsView: View {
     
     @State private var showingPrivacyPolicy = false
     
     private let settings: [CobrowseSession.Setting] = [
-        .init(title: "Redaction by default", keyPath: \.isRedactionByDefaultEnabled),
+        .init(title: "Private by Default", keyPath: \.privateByDefault),
     ]
 
     var body: some View {
@@ -21,11 +22,14 @@ struct SettingsView: View {
             Button("Privacy Policy") {
                 showingPrivacyPolicy = true
             }
+            .accessibilityIdentifier("PRIVACY_POLICY_BUTTON")
         }
         .frame(maxWidth: .infinity)
         .background { Color("Background").ignoresSafeArea() }
         .navigationTitle("Settings")
         .closeModelToolBar()
+        .sessionToolbar()
+        .cobrowseRedacted(if: cobrowseSession.$privateByDefault)
         .sheet(isPresented: $showingPrivacyPolicy) {
             SafariView(url: "https://cobrowse.io/privacy")
         }

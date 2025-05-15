@@ -72,7 +72,7 @@ extension ChartViewController: CobrowseIOUnredacted {
     
     func unredactedViews() -> [UIView] {
         
-        guard cobrowseSession.isRedactionByDefaultEnabled
+        guard cobrowseSession.privateByDefault
             else { return [] }
         
         return [

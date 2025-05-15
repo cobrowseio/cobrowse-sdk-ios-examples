@@ -466,7 +466,7 @@
             <objects>
                 <tableViewController id="krq-52-kp9" customClass="TransactionTableViewController" customModule="Cobrowse" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="15n-YK-2CQ">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -583,7 +583,7 @@
             <objects>
                 <viewController storyboardIdentifier="WebViewController" id="ewE-gz-tAp" customClass="WebViewController" customModule="Cobrowse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zDa-gx-k4z">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" allowsLinkPreview="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Bt-Y2-lUv">
@@ -795,7 +795,7 @@
                                                 <rect key="frame" x="324" y="0.0" width="51" height="24"/>
                                                 <color key="onTintColor" name="CBPrimary"/>
                                                 <connections>
-                                                    <action selector="redactionByDefaultSwitchDidChange:" destination="BfR-S6-nvG" eventType="valueChanged" id="3cI-QK-fCJ"/>
+                                                    <action selector="privateByDefaultSwitchDidChange:" destination="BfR-S6-nvG" eventType="valueChanged" id="3cI-QK-fCJ"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -833,7 +833,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="redactionByDefaultSwitch" destination="aLV-XI-mwz" id="a2u-FX-Iap"/>
+                        <outlet property="privateByDefaultSwitch" destination="aLV-XI-mwz" id="a2u-FX-Iap"/>
                         <outlet property="sessionButton" destination="IoN-Eo-hrc" id="fEF-c5-dMe"/>
                     </connections>
                 </viewController>

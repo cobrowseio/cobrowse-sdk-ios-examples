@@ -12,7 +12,7 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var sessionButton: UIBarButtonItem!
     
-    @IBOutlet weak var redactionByDefaultSwitch: UISwitch!
+    @IBOutlet weak var privateByDefaultSwitch: UISwitch!
     
     private var bag = Set<AnyCancellable>()
     
@@ -21,7 +21,7 @@ class SettingsViewController: UIViewController {
         
         subscribeToSession()
         
-        redactionByDefaultSwitch.isOn = cobrowseSession.isRedactionByDefaultEnabled
+        privateByDefaultSwitch.isOn = cobrowseSession.privateByDefault
     }
     
     @IBAction func sessionButtonWasTapped(_ sender: Any) {
@@ -32,8 +32,8 @@ class SettingsViewController: UIViewController {
         dismiss(animated: true)
     }
     
-    @IBAction func redactionByDefaultSwitchDidChange(_ sender: Any) {
-        cobrowseSession.isRedactionByDefaultEnabled = redactionByDefaultSwitch.isOn
+    @IBAction func privateByDefaultSwitchDidChange(_ sender: Any) {
+        cobrowseSession.privateByDefault = privateByDefaultSwitch.isOn
     }
 }
 
