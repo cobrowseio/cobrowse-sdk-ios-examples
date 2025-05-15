@@ -5,6 +5,7 @@
 
 import UIKit
 import Combine
+import SafariServices
 
 import CobrowseSDK
 
@@ -34,6 +35,14 @@ class SettingsViewController: UIViewController {
     
     @IBAction func privateByDefaultSwitchDidChange(_ sender: Any) {
         cobrowseSession.privateByDefault = privateByDefaultSwitch.isOn
+    }
+    
+    @IBAction func privacyPolicyButtonWasTapped(_ sender: Any) {
+        let url = URL(string: "https://cobrowse.io/privacy-policy")!
+        let vc = SFSafariViewController(url: url)
+        vc.preferredControlTintColor = UIColor.cbPrimary
+        vc.modalPresentationStyle = .formSheet
+        present(vc, animated: true)
     }
 }
 
