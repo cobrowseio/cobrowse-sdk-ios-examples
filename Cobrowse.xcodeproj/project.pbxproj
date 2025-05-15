@@ -116,6 +116,9 @@
 		4A163E3B2BD96308004F8658 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A163D512BD95E94004F8658 /* UserDefault.swift */; };
 		4A163E3C2BD9632D004F8658 /* CodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A163D642BD95E94004F8658 /* CodeTextField.swift */; };
 		4A163E3F2BD96388004F8658 /* SampleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A163DA92BD95EAA004F8658 /* SampleHandler.swift */; };
+		4A56DF312DCE0AC50057847F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56DF302DCE0AC30057847F /* SettingsView.swift */; };
+		4A56DF332DCE3AC80057847F /* CloseModelToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56DF322DCE3AC80057847F /* CloseModelToolBar.swift */; };
+		4A56DF352DCE48CF0057847F /* SFSafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56DF342DCE48CF0057847F /* SFSafariView.swift */; };
 		4A5E9EBB2DBF9DB000CB4BD1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E9EBA2DBF9DB000CB4BD1 /* SceneDelegate.swift */; };
 		4A5E9EBC2DBF9DB000CB4BD1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E9EBA2DBF9DB000CB4BD1 /* SceneDelegate.swift */; };
 		4A5FD1692C6E42D100D03DC1 /* SessionControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FD1682C6E42D100D03DC1 /* SessionControlView.swift */; };
@@ -314,6 +317,9 @@
 		4A1D471F2A03BFBF00109053 /* Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publisher.swift; sourceTree = "<group>"; };
 		4A1D47212A03BFDF00109053 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		4A4CEC0D2B067954004BD263 /* Cobrowse - SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cobrowse - SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A56DF302DCE0AC30057847F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		4A56DF322DCE3AC80057847F /* CloseModelToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseModelToolBar.swift; sourceTree = "<group>"; };
+		4A56DF342DCE48CF0057847F /* SFSafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariView.swift; sourceTree = "<group>"; };
 		4A5E9EBA2DBF9DB000CB4BD1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4A5FD1682C6E42D100D03DC1 /* SessionControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionControlView.swift; sourceTree = "<group>"; };
 		4A5FD16E2C6E431600D03DC1 /* Demo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Demo.swift; sourceTree = "<group>"; };
@@ -543,6 +549,7 @@
 		4A163DBA2BD95EFE004F8658 /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
+				4A56DF322DCE3AC80057847F /* CloseModelToolBar.swift */,
 				4A163DB82BD95EFE004F8658 /* OnHeightChange.swift */,
 				4A163DB92BD95EFE004F8658 /* SessionToolBar.swift */,
 			);
@@ -577,6 +584,8 @@
 		4A5FD1932C6E45EE00D03DC1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4A56DF302DCE0AC30057847F /* SettingsView.swift */,
+				4A56DF342DCE48CF0057847F /* SFSafariView.swift */,
 				4A5FD1842C6E45EE00D03DC1 /* AccountView.swift */,
 				4A5FD1852C6E45EE00D03DC1 /* AgentPresentView.swift */,
 				4A5FD1862C6E45EE00D03DC1 /* CodeInput.swift */,
@@ -916,6 +925,7 @@
 				4A163E312BD9628F004F8658 /* CobrowseSession.swift in Sources */,
 				4A5FD1962C6E45EE00D03DC1 /* CodeInput.swift in Sources */,
 				4A163DAD2BD95EE5004F8658 /* Locale.Currency+SwiftUI.swift in Sources */,
+				4A56DF352DCE48CF0057847F /* SFSafariView.swift in Sources */,
 				4A5FD1A12C6E45EE00D03DC1 /* Transaction+List+Item.swift in Sources */,
 				4A5FD1A62C6E465F00D03DC1 /* SceneDelegate.swift in Sources */,
 				4A163DAE2BD95EE5004F8658 /* Transaction+SwiftUI.swift in Sources */,
@@ -926,7 +936,9 @@
 				4A5FD1942C6E45EE00D03DC1 /* AccountView.swift in Sources */,
 				4A163E3B2BD96308004F8658 /* UserDefault.swift in Sources */,
 				4A163E352BD962B5004F8658 /* Character.swift in Sources */,
+				4A56DF332DCE3AC80057847F /* CloseModelToolBar.swift in Sources */,
 				4A163E362BD962B5004F8658 /* Date.swift in Sources */,
+				4A56DF312DCE0AC50057847F /* SettingsView.swift in Sources */,
 				4A163E372BD962B5004F8658 /* DispatchQueue.swift in Sources */,
 				4A5FD19D2C6E45EE00D03DC1 /* SignIn.swift in Sources */,
 				4A5FD1982C6E45EE00D03DC1 /* PassThroughWindow.swift in Sources */,
