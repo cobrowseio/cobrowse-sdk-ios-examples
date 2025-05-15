@@ -780,19 +780,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rnr-cj-lv7">
-                                <rect key="frame" x="0.0" y="162" width="393" height="577.66666666666663"/>
+                                <rect key="frame" x="0.0" y="162" width="393" height="570.66666666666663"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mZ-I3-PFC">
-                                        <rect key="frame" x="10" y="10" width="373" height="31"/>
+                                        <rect key="frame" x="10" y="10" width="373" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Redaction by default" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhM-uS-E7b">
-                                                <rect key="frame" x="0.0" y="0.0" width="324" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="324" height="24"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                 <color key="textColor" name="Text"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aLV-XI-mwz">
-                                                <rect key="frame" x="324" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="324" y="0.0" width="51" height="24"/>
                                                 <color key="onTintColor" name="CBPrimary"/>
                                                 <connections>
                                                     <action selector="privateByDefaultSwitchDidChange:" destination="BfR-S6-nvG" eventType="valueChanged" id="3cI-QK-fCJ"/>
@@ -801,13 +801,13 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HdH-n1-bha">
-                                        <rect key="frame" x="10" y="41" width="373" height="526.66666666666663"/>
+                                        <rect key="frame" x="10" y="34" width="373" height="526.66666666666663"/>
                                     </view>
                                 </subviews>
                                 <edgeInsets key="layoutMargins" top="10" left="10" bottom="10" right="10"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXB-tt-0pb">
-                                <rect key="frame" x="132" y="749.66666666666663" width="129.33333333333337" height="34.333333333333371"/>
+                                <rect key="frame" x="132" y="742.66666666666663" width="129.33333333333337" height="21.333333333333371"/>
                                 <color key="tintColor" name="CBPrimary"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Privacy Policy"/>
@@ -823,7 +823,7 @@
                             <constraint firstItem="eXB-tt-0pb" firstAttribute="top" secondItem="rnr-cj-lv7" secondAttribute="bottom" constant="10" id="clf-YH-AdZ"/>
                             <constraint firstItem="rnr-cj-lv7" firstAttribute="width" secondItem="yqC-3G-SUL" secondAttribute="width" id="dDq-xw-f8F"/>
                             <constraint firstItem="rnr-cj-lv7" firstAttribute="centerX" secondItem="yqC-3G-SUL" secondAttribute="centerX" id="efv-P8-lRd"/>
-                            <constraint firstItem="yqC-3G-SUL" firstAttribute="bottom" secondItem="eXB-tt-0pb" secondAttribute="bottom" id="ejf-rC-jzZ"/>
+                            <constraint firstItem="yqC-3G-SUL" firstAttribute="bottom" secondItem="eXB-tt-0pb" secondAttribute="bottom" constant="20" id="ejf-rC-jzZ"/>
                             <constraint firstItem="eXB-tt-0pb" firstAttribute="centerX" secondItem="yqC-3G-SUL" secondAttribute="centerX" id="h7P-eb-IAu"/>
                         </constraints>
                     </view>
