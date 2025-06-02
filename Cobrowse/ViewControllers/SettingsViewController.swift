@@ -38,7 +38,7 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func privacyPolicyButtonWasTapped(_ sender: Any) {
-        let url = URL(string: "https://cobrowse.io/privacy-policy")!
+        let url = URL(string: "https://cobrowse.io/privacy")!
         let vc = SFSafariViewController(url: url)
         vc.preferredControlTintColor = UIColor.cbPrimary
         vc.modalPresentationStyle = .formSheet
