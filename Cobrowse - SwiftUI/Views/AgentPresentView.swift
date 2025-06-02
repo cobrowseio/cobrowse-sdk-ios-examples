@@ -62,6 +62,6 @@ struct AgentPresentView: View {
             .navigationBarTitleDisplayMode(.inline)
             .closeModelToolBar()
             .sessionToolbar()
-            .cobrowseRedacted(if: cobrowseSession.$privateByDefault)
+            .cobrowseRedacted(if: cobrowseSession.privateByDefault)
         }
 }

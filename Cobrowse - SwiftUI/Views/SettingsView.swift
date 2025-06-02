@@ -30,7 +30,7 @@ struct SettingsView: View {
         .navigationTitle("Settings")
         .closeModelToolBar()
         .sessionToolbar()
-        .cobrowseRedacted(if: cobrowseSession.$privateByDefault)
+        .cobrowseRedacted(if: cobrowseSession.privateByDefault)
         .sheet(isPresented: $showingPrivacyPolicy) {
             SafariView(url: "https://cobrowse.io/privacy")
         }

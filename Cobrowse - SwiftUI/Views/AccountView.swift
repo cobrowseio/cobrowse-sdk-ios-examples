@@ -54,7 +54,7 @@ struct AccountView: View {
             }
             .closeModelToolBar(unredact: true)
             .sessionToolbar(unredact: true)
-            .cobrowseRedacted(if: cobrowseSession.$privateByDefault)
+            .cobrowseRedacted(if: cobrowseSession.privateByDefault)
         }
         .onDisappear {
             guard let current = cobrowseSession.current, !current.isActive()
