@@ -11,6 +11,7 @@ class CobrowseSession: NSObject, ObservableObject, CobrowseIODelegate {
     
     @Published var current: CBIOSession?
     @Published var controlState: CobrowseSession.Control.State = .hidden
+    @Published var currentLatency: TimeInterval? = nil
 
     @AppStorage("privateByDefault")
     var privateByDefault = false
@@ -22,7 +23,11 @@ class CobrowseSession: NSObject, ObservableObject, CobrowseIODelegate {
     func cobrowseSessionDidEnd(_ session: CBIOSession) {
         current = nil
     }
-    
+
+    func cobrowseSessionMetricsDidUpdate(_ session: CBIOSession) {
+        currentLatency = session.metrics().latency()
+    }
+
     func cobrowseShowSessionControls(_ session: CBIOSession) {
         controlState = .visible
     }
