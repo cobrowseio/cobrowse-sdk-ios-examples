@@ -18,7 +18,7 @@ class SessionMetricsButton: UIButton {
         layer.masksToBounds = true
         
         subscribeToSession()
-        subscribeToSessionMetircs()
+        subscribeToSessionLatencey()
     }
     
     override func layoutSubviews() {
@@ -44,34 +44,10 @@ extension SessionMetricsButton {
         .store(in: &bag)
     }
     
-    private func subscribeToSessionMetircs() {
+    private func subscribeToSessionLatencey() {
         
-        cobrowseSession.$metrics.sink { [weak self] metrics in
-            
-            self?.latency = .unknown
-            
-            guard let metrics
-                else { return }
-            
-            let latencey = metrics.latency()
-            
-            switch latencey {
-                case 0:
-                    self?.latency = .unknown
-                    break
-                
-                case 0.01...0.3:
-                    self?.latency = .low
-                    break
-                
-                case 0.31...0.8:
-                    self?.latency = .medium
-                    break
-                
-                default:
-                    self?.latency = .high
-                    break
-            }
+        cobrowseSession.$latency.sink { [weak self] latencey in
+            self?.latency = latencey
         }
         .store(in: &bag)
     }

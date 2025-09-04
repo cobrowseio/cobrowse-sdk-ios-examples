@@ -150,6 +150,10 @@
 		4A77B5D32C52F1F00059D87F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A163D712BD95E94004F8658 /* LaunchScreen.storyboard */; };
 		4A886DBB2DA68E59000C7063 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A886DBA2DA68E59000C7063 /* UINavigationController.swift */; };
 		4A886DBC2DA68E59000C7063 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A886DBA2DA68E59000C7063 /* UINavigationController.swift */; };
+		4AB597712E69CC4F008D1FFB /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C3FDCC2E68885900B26F09 /* Double.swift */; };
+		4AB597732E69D382008D1FFB /* SessionLatencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB597722E69D382008D1FFB /* SessionLatencyView.swift */; };
+		4AB597752E69D39A008D1FFB /* SessionMetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB597742E69D39A008D1FFB /* SessionMetricsView.swift */; };
+		4AB597772E69D3B8008D1FFB /* Latency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB597762E69D3B8008D1FFB /* Latency.swift */; };
 		4AC7E51C29F94CEF00722B29 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC7E51B29F94CEF00722B29 /* ReplayKit.framework */; };
 		4AC85E0F2C19D491001338EF /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 4AC85E0E2C19D491001338EF /* DGCharts */; };
 		4AE2BAAC2C9D1D0200FF6ED0 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC7E51B29F94CEF00722B29 /* ReplayKit.framework */; };
@@ -349,6 +353,9 @@
 		4A8187192ABDFD5A00C90B9E /* DispatchQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
 		4A84E1592B2222E300C2789A /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
 		4A886DBA2DA68E59000C7063 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		4AB597722E69D382008D1FFB /* SessionLatencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionLatencyView.swift; sourceTree = "<group>"; };
+		4AB597742E69D39A008D1FFB /* SessionMetricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionMetricsView.swift; sourceTree = "<group>"; };
+		4AB597762E69D3B8008D1FFB /* Latency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Latency.swift; sourceTree = "<group>"; };
 		4AC7E51929F94CEF00722B29 /* Broadcast Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Broadcast Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC7E51B29F94CEF00722B29 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
 		4AEEDB3329DF0743009B7208 /* Cobrowse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cobrowse.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -534,6 +541,7 @@
 		4A163DB22BD95EFE004F8658 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4AB597762E69D3B8008D1FFB /* Latency.swift */,
 				4A163DAF2BD95EFE004F8658 /* CBIOSession.swift */,
 				4A163DB02BD95EFE004F8658 /* CobrowseIO.swift */,
 			);
@@ -595,7 +603,9 @@
 		4A5FD1932C6E45EE00D03DC1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4AB597722E69D382008D1FFB /* SessionLatencyView.swift */,
 				4A56DF302DCE0AC30057847F /* SettingsView.swift */,
+				4AB597742E69D39A008D1FFB /* SessionMetricsView.swift */,
 				4A56DF342DCE48CF0057847F /* SFSafariView.swift */,
 				4A5FD1842C6E45EE00D03DC1 /* AccountView.swift */,
 				4A5FD1852C6E45EE00D03DC1 /* AgentPresentView.swift */,
@@ -937,6 +947,7 @@
 				4A5FD1A52C6E465F00D03DC1 /* AppDelegate.swift in Sources */,
 				4A163E302BD9628F004F8658 /* Account.swift in Sources */,
 				4A163E312BD9628F004F8658 /* CobrowseSession.swift in Sources */,
+				4AB597752E69D39A008D1FFB /* SessionMetricsView.swift in Sources */,
 				4A5FD1962C6E45EE00D03DC1 /* CodeInput.swift in Sources */,
 				4A163DAD2BD95EE5004F8658 /* Locale.Currency+SwiftUI.swift in Sources */,
 				4A56DF352DCE48CF0057847F /* SFSafariView.swift in Sources */,
@@ -948,8 +959,10 @@
 				4A163E332BD962B5004F8658 /* RawRepresentable.swift in Sources */,
 				4A163E342BD962B5004F8658 /* Array.swift in Sources */,
 				4A5FD1942C6E45EE00D03DC1 /* AccountView.swift in Sources */,
+				4AB597732E69D382008D1FFB /* SessionLatencyView.swift in Sources */,
 				4A163E352BD962B5004F8658 /* Character.swift in Sources */,
 				4A56DF332DCE3AC80057847F /* CloseModelToolBar.swift in Sources */,
+				4AB597712E69CC4F008D1FFB /* Double.swift in Sources */,
 				4A163E362BD962B5004F8658 /* Date.swift in Sources */,
 				4A56DF312DCE0AC50057847F /* SettingsView.swift in Sources */,
 				4A163E372BD962B5004F8658 /* DispatchQueue.swift in Sources */,
@@ -966,6 +979,7 @@
 				4A5FD1952C6E45EE00D03DC1 /* AgentPresentView.swift in Sources */,
 				4A5FD1A02C6E45EE00D03DC1 /* Transaction+List.swift in Sources */,
 				4A5FD19C2C6E45EE00D03DC1 /* Shake.swift in Sources */,
+				4AB597772E69D3B8008D1FFB /* Latency.swift in Sources */,
 				4A163DCD2BD95EFE004F8658 /* CobrowseIO.swift in Sources */,
 				4A163DE12BD95EFE004F8658 /* Cobrowse.swift in Sources */,
 				4A5FD19F2C6E45EE00D03DC1 /* Transaction+Detail.swift in Sources */,
