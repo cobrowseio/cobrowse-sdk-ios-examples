@@ -30,22 +30,11 @@ class CobrowseSession: NSObject, ObservableObject, CobrowseIODelegate {
         
         let latencey: TimeInterval = metrics?.latency() ?? 0
         
-        switch latencey {
-            case 0:
-                self.latency = .unknown
-                break
-            
-            case 0.01...0.3:
-                self.latency = .low
-                break
-            
-            case 0.31...0.8:
-                self.latency = .medium
-                break
-            
-            default:
-                self.latency = .high
-                break
+       self.latency = switch latencey {
+            case 0: .unknown
+            case 0.01...0.3: .low
+            case 0.31...0.8: .medium
+            default: .high
         }
     }
     
