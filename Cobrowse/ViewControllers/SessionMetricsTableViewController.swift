@@ -27,7 +27,7 @@ class SessionMetricsTableViewController: UITableViewController {
         super.viewDidLoad()
 
         subscribeToSession()
-        subscribeToSessionMetircs()
+        subscribeToSessionMetrics()
     }
 
     // MARK: - Table view data source
@@ -96,7 +96,7 @@ extension SessionMetricsTableViewController {
         .store(in: &bag)
     }
     
-    private func subscribeToSessionMetircs() {
+    private func subscribeToSessionMetrics() {
         
         cobrowseSession.$metrics.sink { [weak self] metrics in
             self?.metrics = metrics

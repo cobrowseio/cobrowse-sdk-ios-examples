@@ -28,9 +28,9 @@ class CobrowseSession: NSObject, ObservableObject, CobrowseIODelegate {
     func cobrowseSessionMetricsDidUpdate(_ session: CBIOSession) {
         metrics = session.metrics()
         
-        let latencey: TimeInterval = metrics?.latency() ?? 0
+        let latency: TimeInterval = metrics?.latency() ?? 0
         
-       self.latency = switch latencey {
+       self.latency = switch latency {
             case 0: .unknown
             case 0.01...0.3: .low
             case 0.31...0.8: .medium
