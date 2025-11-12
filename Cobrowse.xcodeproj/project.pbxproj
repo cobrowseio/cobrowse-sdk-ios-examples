@@ -166,6 +166,8 @@
 		60C3FDCB2E6884AF00B26F09 /* SessionMetricsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C3FDC92E6884AF00B26F09 /* SessionMetricsTableViewController.swift */; };
 		60C3FDCD2E68886000B26F09 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C3FDCC2E68885900B26F09 /* Double.swift */; };
 		60C3FDCE2E68886000B26F09 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C3FDCC2E68885900B26F09 /* Double.swift */; };
+		60F27D862EC4E74B00289DD3 /* SessionControlWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F27D852EC4E74B00289DD3 /* SessionControlWindow.swift */; };
+		60F27D872EC4E74B00289DD3 /* SessionControlWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F27D852EC4E74B00289DD3 /* SessionControlWindow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -363,6 +365,7 @@
 		60C3FDC62E68845600B26F09 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		60C3FDC92E6884AF00B26F09 /* SessionMetricsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionMetricsTableViewController.swift; sourceTree = "<group>"; };
 		60C3FDCC2E68885900B26F09 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		60F27D852EC4E74B00289DD3 /* SessionControlWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionControlWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -488,6 +491,7 @@
 		4A163D662BD95E94004F8658 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				60F27D852EC4E74B00289DD3 /* SessionControlWindow.swift */,
 				4A163D642BD95E94004F8658 /* CodeTextField.swift */,
 				4A5FD1682C6E42D100D03DC1 /* SessionControlView.swift */,
 				4A163D652BD95E94004F8658 /* TransactionTableViewCell.swift */,
@@ -910,6 +914,7 @@
 				4A163E222BD95FB5004F8658 /* SettingsViewController.swift in Sources */,
 				4A163E232BD95FB5004F8658 /* FullDeviceConsentPromptViewController.swift in Sources */,
 				4A163E242BD95FB5004F8658 /* AgentPresentViewController.swift in Sources */,
+				60F27D872EC4E74B00289DD3 /* SessionControlWindow.swift in Sources */,
 				4A163E252BD95FB5004F8658 /* TransactionTableViewController.swift in Sources */,
 				4A163E262BD95FB5004F8658 /* WebViewController.swift in Sources */,
 				4A163E272BD95FB5004F8658 /* CodeTextField.swift in Sources */,
@@ -1027,6 +1032,7 @@
 				4A163D7C2BD95E94004F8658 /* Locale.Currency+UIKit.swift in Sources */,
 				4A163D792BD95E94004F8658 /* Dictionary.swift in Sources */,
 				4A163D782BD95E94004F8658 /* Date.swift in Sources */,
+				60F27D862EC4E74B00289DD3 /* SessionControlWindow.swift in Sources */,
 				4A163D9C2BD95E94004F8658 /* TransactionTableViewCell.swift in Sources */,
 				4A163D8A2BD95E94004F8658 /* SheetPresentationDelegate.swift in Sources */,
 				4A163D832BD95E94004F8658 /* UITextField.swift in Sources */,
