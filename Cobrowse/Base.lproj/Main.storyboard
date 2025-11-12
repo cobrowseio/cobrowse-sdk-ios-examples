@@ -541,6 +541,7 @@
                                             <edgeInsets key="layoutMargins" top="8" left="16" bottom="8" right="16"/>
                                         </stackView>
                                     </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="ngt-tE-wFS" firstAttribute="centerY" secondItem="gzJ-bR-dYo" secondAttribute="centerY" id="98Q-AM-GFR"/>
                                         <constraint firstItem="ngt-tE-wFS" firstAttribute="height" secondItem="gzJ-bR-dYo" secondAttribute="height" id="DJg-3p-PHv"/>
@@ -721,6 +722,9 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="SL6-8W-xcS"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="l1T-0H-us5"/>
                             </scrollView>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t2c-6A-0nK" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EES-E4-Wwh"/>
                         <keyboardLayoutGuide key="keyboard" id="idG-O1-OVP"/>
@@ -728,10 +732,14 @@
                         <constraints>
                             <constraint firstItem="idG-O1-OVP" firstAttribute="top" secondItem="4wf-FP-2ci" secondAttribute="bottom" id="5UB-Pd-b1O"/>
                             <constraint firstItem="gZS-Qu-882" firstAttribute="height" secondItem="6wK-aF-80M" secondAttribute="height" multiplier="0.05" id="Fci-pO-bhO"/>
+                            <constraint firstItem="t2c-6A-0nK" firstAttribute="height" secondItem="6wK-aF-80M" secondAttribute="height" id="S60-z9-DKj"/>
+                            <constraint firstItem="t2c-6A-0nK" firstAttribute="centerX" secondItem="6wK-aF-80M" secondAttribute="centerX" id="Ssy-kx-ws4"/>
+                            <constraint firstItem="t2c-6A-0nK" firstAttribute="centerY" secondItem="6wK-aF-80M" secondAttribute="centerY" id="Vgm-fL-V2c"/>
                             <constraint firstItem="4wf-FP-2ci" firstAttribute="centerX" secondItem="6wK-aF-80M" secondAttribute="centerXWithinMargins" id="eiU-NX-yC6"/>
                             <constraint firstItem="4wf-FP-2ci" firstAttribute="width" secondItem="6wK-aF-80M" secondAttribute="width" id="ew1-cv-EjA"/>
                             <constraint firstItem="4wf-FP-2ci" firstAttribute="top" secondItem="6wK-aF-80M" secondAttribute="top" id="haC-2W-wLN"/>
                             <constraint firstItem="Jg9-CH-YI7" firstAttribute="height" secondItem="6wK-aF-80M" secondAttribute="height" multiplier="0.25" id="kfA-Jv-W7D"/>
+                            <constraint firstItem="t2c-6A-0nK" firstAttribute="width" secondItem="6wK-aF-80M" secondAttribute="width" id="nSd-PL-hYp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mm5-Uo-Rfp">
@@ -744,6 +752,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="Jg9-CH-YI7" id="WNs-5v-AI5"/>
+                        <outlet property="lottieView" destination="t2c-6A-0nK" id="Una-Ng-gnz"/>
                         <outlet property="passwordTextField" destination="gVn-LG-1me" id="rfl-Nu-HFn"/>
                         <outlet property="scrollView" destination="4wf-FP-2ci" id="1iI-dR-m9d"/>
                         <outlet property="sessionButton" destination="Yrj-QU-ghb" id="AwE-qg-N5N"/>
@@ -1057,8 +1066,8 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sen-hF-q3i">
                                         <rect key="frame" x="20" y="70.000000000000014" width="353" height="162.33333333333337"/>
-                                        <mutableString key="text">By enabling full device mode, you allow your agent to view content beyond the initial app, including other apps and information on your device. Ensure to navigate only to apps and data you are comfortable sharing. 
- To start please tap the circle button below and start the broadcast.</mutableString>
+                                        <string key="text">By enabling full device mode, you allow your agent to view content beyond the initial app, including other apps and information on your device. Ensure to navigate only to apps and data you are comfortable sharing. 
+ To start please tap the circle button below and start the broadcast.</string>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                         <color key="textColor" name="Text"/>
                                         <nil key="highlightedColor"/>
