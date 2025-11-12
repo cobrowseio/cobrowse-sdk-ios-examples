@@ -111,7 +111,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="EHb-Cn-oJH">
                         <rightBarButtonItems>
-                            <barButtonItem image="person.circle" catalog="system" id="PZI-fA-rOn">
+                            <barButtonItem image="person.crop.circle" catalog="system" id="PZI-fA-rOn">
                                 <color key="tintColor" name="CBPrimary"/>
                                 <connections>
                                     <segue destination="SbR-n9-CXf" kind="show" identifier="Account" id="4PT-LA-Kkm"/>
@@ -1120,7 +1120,7 @@
     <resources>
         <image name="basket.fill" catalog="system" width="128" height="108"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
-        <image name="person.circle" catalog="system" width="128" height="123"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="123"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <image name="rectangle.badge.xmark" catalog="system" width="128" height="97"/>
         <image name="rectangle.inset.filled.and.person.filled" catalog="system" width="128" height="89"/>
