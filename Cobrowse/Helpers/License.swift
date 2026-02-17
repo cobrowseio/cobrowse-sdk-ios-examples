@@ -1,11 +1,17 @@
 
 import Foundation
 
-enum License {
+actor License {
     
     static func isKnown(_ license: String) async throws -> Bool {
+        try await License.shared.isKnown(license)
+    }
+    
+    private static let shared = License()
+    
+    private func isKnown(_ license: String) async throws -> Bool {
         
-        if try bundled.licenses.contains(license) {
+        if try Self.bundled.licenses.contains(license) {
             return true
         }
         
@@ -14,14 +20,14 @@ enum License {
             return response.licenses.contains(license)
         } else {
             // Fetch the remote list
-            let response = try await fetchRemote()
+            let response = try await Self.fetchRemote()
             self.response = response
             
             return response.licenses.contains(license)
         }
     }
     
-    private static var response: Response?
+    private var response: Response?
     
     private static let remoteURL = URL(string: "https://raw.githubusercontent.com/cobrowseio/cobrowse-sdk-ios-examples/master/Cobrowse/Resources/knownLicenses.json")!
     
