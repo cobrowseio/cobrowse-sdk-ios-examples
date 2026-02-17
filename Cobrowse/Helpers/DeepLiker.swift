@@ -71,11 +71,11 @@ extension DeepLinker {
             guard try await license.isKnown
                 else { return }
             
-             let cobrowse = CobrowseIO.instance()
-             cobrowse.stop()
-             cobrowse.license = license
-             cobrowse.start()
-         }
+            let cobrowse = CobrowseIO.instance()
+            cobrowse.stop()
+            cobrowse.license = license
+            cobrowse.start()
+        }
         
         return true
     }
@@ -104,7 +104,7 @@ extension DeepLinker {
         } else if let code = components.path.split(separator: "/").last {
             return startSession(with: String(code))
         }
-            
+        
         return false
     }
     
@@ -139,7 +139,7 @@ extension DeepLinker {
             if let license = queryItems.pop("license") {
                 cobrowse.license = license
             }
-
+            
             var components = components
             components.queryItems = queryItems
             
@@ -147,7 +147,7 @@ extension DeepLinker {
             
             cobrowse.start()
         }
-
+        
         if !account.isSignedIn {
             account.isSignedIn = true
         }
