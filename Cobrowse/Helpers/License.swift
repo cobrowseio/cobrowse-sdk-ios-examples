@@ -23,7 +23,7 @@ enum License {
     
     private static var response: Response?
     
-    private static let remoteURL = URL(string: "https://raw.githubusercontent.com/cobrowseio/cobrowse-sdk-ios-examples/master/Cobrowse/Recources/knownLicenses.json")!
+    private static let remoteURL = URL(string: "https://raw.githubusercontent.com/cobrowseio/cobrowse-sdk-ios-examples/master/Cobrowse/Resources/knownLicenses.json")!
     
     private static func fetchRemote() async throws -> Response {
         
