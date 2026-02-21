@@ -175,6 +175,9 @@
 		60C3FDCB2E6884AF00B26F09 /* SessionMetricsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C3FDC92E6884AF00B26F09 /* SessionMetricsTableViewController.swift */; };
 		60C3FDCD2E68886000B26F09 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C3FDCC2E68885900B26F09 /* Double.swift */; };
 		60C3FDCE2E68886000B26F09 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C3FDCC2E68885900B26F09 /* Double.swift */; };
+		60D7C6502EEC257300D9D524 /* String+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D7C64F2EEC257300D9D524 /* String+UIKit.swift */; };
+		60D7C6512EEC257300D9D524 /* String+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D7C64F2EEC257300D9D524 /* String+UIKit.swift */; };
+		60D7C6522EEC258900D9D524 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C3FDC62E68845600B26F09 /* String.swift */; };
 		60F27D862EC4E74B00289DD3 /* SessionControlWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F27D852EC4E74B00289DD3 /* SessionControlWindow.swift */; };
 		60F27D872EC4E74B00289DD3 /* SessionControlWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F27D852EC4E74B00289DD3 /* SessionControlWindow.swift */; };
 		60F27D8A2EC4E8E100289DD3 /* CobrowseSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 60F27D892EC4E8E100289DD3 /* CobrowseSDK */; };
@@ -354,6 +357,7 @@
 		60C3FDC62E68845600B26F09 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		60C3FDC92E6884AF00B26F09 /* SessionMetricsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionMetricsTableViewController.swift; sourceTree = "<group>"; };
 		60C3FDCC2E68885900B26F09 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		60D7C64F2EEC257300D9D524 /* String+UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+UIKit.swift"; sourceTree = "<group>"; };
 		60F27D852EC4E74B00289DD3 /* SessionControlWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionControlWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -424,6 +428,7 @@
 				4A163D422BD95E94004F8658 /* Publisher.swift */,
 				4A163D432BD95E94004F8658 /* RawRepresentable.swift */,
 				60C3FDC62E68845600B26F09 /* String.swift */,
+				60D7C64F2EEC257300D9D524 /* String+UIKit.swift */,
 				4A886DBA2DA68E59000C7063 /* UINavigationController.swift */,
 				4A163D452BD95E94004F8658 /* UISheetPresentationController.swift */,
 				4A163D462BD95E94004F8658 /* UIStoryboard.swift */,
@@ -945,6 +950,7 @@
 				609D89262F2380C500EE3D0E /* AccountSummaryDataSource.swift in Sources */,
 				4A163E102BD95FA8004F8658 /* UITextField.swift in Sources */,
 				4A163E112BD95FA8004F8658 /* Publisher.swift in Sources */,
+				60D7C6512EEC257300D9D524 /* String+UIKit.swift in Sources */,
 				4A163E122BD95FA8004F8658 /* Identifiers.swift in Sources */,
 				4A163E132BD95FA8004F8658 /* Date.swift in Sources */,
 				4A163E142BD95FA8004F8658 /* Dictionary.swift in Sources */,
@@ -1003,6 +1009,7 @@
 				609D89252F2380C500EE3D0E /* AccountSummaryDataSource.swift in Sources */,
 				4A163E2F2BD96287004F8658 /* Transaction.swift in Sources */,
 				4A163DD32BD95EFE004F8658 /* SessionToolBar.swift in Sources */,
+				60D7C6522EEC258900D9D524 /* String.swift in Sources */,
 				4A5FD1952C6E45EE00D03DC1 /* AgentPresentView.swift in Sources */,
 				4A5FD1A02C6E45EE00D03DC1 /* Transaction+List.swift in Sources */,
 				4A5FD19C2C6E45EE00D03DC1 /* Shake.swift in Sources */,
@@ -1067,6 +1074,7 @@
 				609D89242F2380C500EE3D0E /* AccountSummaryDataSource.swift in Sources */,
 				4A163D882BD95E94004F8658 /* Formatters.swift in Sources */,
 				4A163D922BD95E94004F8658 /* AccountViewController.swift in Sources */,
+				60D7C6502EEC257300D9D524 /* String+UIKit.swift in Sources */,
 				4A163D8F2BD95E94004F8658 /* Transaction.swift in Sources */,
 				4A163D7A2BD95E94004F8658 /* DispatchQueue.swift in Sources */,
 				4A5FD1692C6E42D100D03DC1 /* SessionControlView.swift in Sources */,
@@ -1134,7 +1142,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Cobrowse App Clip/Cobrowse_App_Clip.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Cobrowse App Clip/Info.plist";
@@ -1150,7 +1158,7 @@
 					"@executable_path/Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.cobrowse.demo.app-clip";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1169,7 +1177,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Cobrowse App Clip/Cobrowse_App_Clip.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Cobrowse App Clip/Info.plist";
@@ -1185,7 +1193,7 @@
 					"@executable_path/Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.cobrowse.demo.app-clip";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1221,7 +1229,7 @@
 					"@executable_path/Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.cobrowse.demo.swiftui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -1256,7 +1264,7 @@
 					"@executable_path/Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.cobrowse.demo.swiftui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1283,7 +1291,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.cobrowse.demo.swiftui.broadcast-extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1312,7 +1320,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.cobrowse.demo.swiftui.broadcast-extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1328,7 +1336,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Broadcast Extension/Broadcast Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Broadcast Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Cobrowse;
@@ -1339,7 +1347,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.cobrowse.demo.broadcast-extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1356,7 +1364,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Broadcast Extension/Broadcast Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Broadcast Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Cobrowse;
@@ -1367,7 +1375,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.cobrowse.demo.broadcast-extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1506,7 +1514,7 @@
 				CODE_SIGN_ENTITLEMENTS = Cobrowse/Cobrowse.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cobrowse/Info.plist;
@@ -1523,7 +1531,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.cobrowse.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1541,7 +1549,7 @@
 				CODE_SIGN_ENTITLEMENTS = Cobrowse/Cobrowse.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cobrowse/Info.plist;
@@ -1558,7 +1566,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.cobrowse.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
