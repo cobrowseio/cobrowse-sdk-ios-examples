@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Demo.setup() // Check if launching from App Clip or https://cobrowse.io/demo
         
         cobrowse.start()
-
+        
         return true
     }
 }
