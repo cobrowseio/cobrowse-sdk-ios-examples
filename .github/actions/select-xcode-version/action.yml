@@ -4,20 +4,8 @@ description: Select the Xcode version to be used to compile the apps
 runs:
   using: "composite"
   steps:
-    - name: Select Xcode version
-      env:
-        XCODE_SELECTED_PATH: "/Applications/Xcode_26.0.app"
-      shell: bash
-      run: |
-        sudo xcode-select --switch ${XCODE_SELECTED_PATH}
-        xcodebuild -version
-
-    - name: Download the iOS runtime
-      shell: bash
-      run: |
-        xcrun simctl list > /dev/null
-        xcrun xcodebuild -downloadPlatform iOS
-
+    # Use the default Xcode pre-selected on Github Actions
+    # which is expected to always have the corresponding iOS runtime pre-installed.
     - name: Warm up Xcode
       shell: bash
       run: |
