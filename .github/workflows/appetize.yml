@@ -31,7 +31,13 @@ jobs:
         uses: ./.github/actions/select-xcode-version
 
       - name: Build the app
-        run: xcodebuild -project Cobrowse.xcodeproj -scheme Cobrowse -sdk iphonesimulator -destination "generic/platform=iOS Simulator" -derivedDataPath "./build" build | xcpretty
+        run: |
+          xcodebuild -project Cobrowse.xcodeproj \
+            -scheme Cobrowse \
+            -sdk iphonesimulator \
+            -destination "generic/platform=iOS Simulator" \
+            -derivedDataPath "./build" \
+            build | xcpretty && exit ${PIPESTATUS[0]}
 
       - name: Create app archive
         run: tar -czf Cobrowse.app.tar.gz build/Build/Products/Debug-iphonesimulator/Cobrowse.app
