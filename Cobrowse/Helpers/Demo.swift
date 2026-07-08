@@ -22,12 +22,11 @@ enum Demo {
         #endif
         
         if isDemo {
-            let demoID = Int.random(in: 1000..<9999).description
-            
             #if APPCLIP
             let license = "rE6HC6EDX6g2_w"
-            let deviceName = "AppClip iOS Device (\(demoID))"
-            let userEmail = "appclip-\(demoID)@example.com"
+            let deviceID = Int.random(in: 1000..<9999).description
+            let deviceName = "AppClip iOS Device (\(deviceID))"
+            let userEmail = "appclip-\(deviceID)@example.com"
             #else
             let license = "trial"
             let deviceName = "Trial iOS Device"
@@ -40,7 +39,6 @@ enum Demo {
             cobrowse.api = "https://cobrowse.io"
             cobrowse.capabilities = ["arrows", "disappearing_ink", "drawing", "keypress", "laser", "pointer", "rectangles"]
             cobrowse.customData = [
-                "demo_id": demoID,
                 CBIODeviceNameKey: deviceName,
                 CBIOUserEmailKey: userEmail
             ]
