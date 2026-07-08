@@ -8,6 +8,8 @@ import SwiftUI
 import CobrowseSDK
 
 enum Demo {
+    @AppStorage("demo_id")
+    static var id = ""
     
     @AppStorage("isAppetize")
     static var isAppetize = false
@@ -39,6 +41,7 @@ enum Demo {
             cobrowse.api = "https://cobrowse.io"
             cobrowse.capabilities = ["arrows", "disappearing_ink", "drawing", "keypress", "laser", "pointer", "rectangles"]
             cobrowse.customData = [
+                "demo_id": Demo.id,
                 CBIODeviceNameKey: deviceName,
                 CBIOUserEmailKey: userEmail
             ]
