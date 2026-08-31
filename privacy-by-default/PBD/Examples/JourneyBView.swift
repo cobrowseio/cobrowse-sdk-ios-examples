@@ -20,5 +20,6 @@ struct JourneyBView: View {
         .padding()
         .navigationTitle("Journey B")
         .frameworkPill()
+        .cobrowseScreen(Self.self)
     }
 }

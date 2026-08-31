@@ -47,6 +47,14 @@ class ViewController: UIViewController {
         let pathNavButton = makeButton(title: "Make Payment (path)", style: .tinted)
         pathNavButton.addTarget(self, action: #selector(pathNavTapped), for: .touchUpInside)
 
+        let sheetsButton = makeButton(title: "Sheets", style: .tinted)
+        sheetsButton.addTarget(self, action: #selector(sheetsTapped), for: .touchUpInside)
+
+        let containersButton = makeButton(title: "Containers", style: .tinted)
+        containersButton.addTarget(self, action: #selector(containersTapped), for: .touchUpInside)
+
+        let representableButton = makeButton(title: "Representable", style: .tinted)
+        representableButton.addTarget(self, action: #selector(representableTapped), for: .touchUpInside)
 
         let stack = UIStackView(arrangedSubviews: [
             titleLabel,
@@ -56,7 +64,11 @@ class ViewController: UIViewController {
             journeyBButton,
             spacer(height: 4),
             paymentButton,
-            pathNavButton
+            pathNavButton,
+            spacer(height: 4),
+            sheetsButton,
+            containersButton,
+            representableButton
         ])
         stack.axis = .vertical
         stack.spacing = 12
@@ -107,11 +119,19 @@ class ViewController: UIViewController {
     }
 
     @objc private func pathNavTapped() {
-        // Deliberately not routed, as a check that nothing in the redaction
-        // policy depends on `SwiftUIRouter`. A hosting controller made by hand
-        // keeps its `rootView`'s type, which is all the allowlist needs — so
-        // this screen behaves exactly as the routed one beside it.
         present(UIHostingController(rootView: MakePaymentPathView()), animated: true)
+    }
+
+    @objc private func sheetsTapped() {
+        router?.show(SheetsDemoView())
+    }
+
+    @objc private func containersTapped() {
+        router?.show(ContainersDemoView())
+    }
+
+    @objc private func representableTapped() {
+        router?.show(RepresentableDemoView())
     }
 }
 

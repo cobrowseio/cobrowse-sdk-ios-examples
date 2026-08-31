@@ -8,27 +8,12 @@
 import SwiftUI
 import CobrowseSDK
 
-/// Routes this stack can push, one type each.
-///
-/// One type per destination rather than one enum switched over, so that every
-/// `navigationDestination` closure returns a single concrete view.
-///
-/// Not a style preference. SwiftUI erases a destination's type before the SDK
-/// is told about it, and what survives is the closure's *static* type — so a
-/// `switch` names every branch at once and nothing outside can say which is
-/// showing. Reading the built value instead was tried and reverted: that graph
-/// keeps views from pushes already dismissed, and a stale one revealed the
-/// card details.
 struct CardDetailsRoute: Hashable {}
 
 struct ExplainBillRoute: Hashable {}
 
 /// `NavigationStack` driven by a typed path, as a contrast with
 /// `MakePaymentView`'s boolean destinations.
-///
-/// Neither inspects its own navigation, and neither approves anything. Every
-/// view is hidden by default and `Approvals.swift` decides which are revealed —
-/// this one and its destinations alike.
 ///
 /// The single `cobrowseRedacted()` below goes the other way: it hides the
 /// amount field *because* the screen around it is revealed.
@@ -75,12 +60,13 @@ struct MakePaymentPathView: View {
                     .listRowBackground(Color.clear)
                 }
             }
+            .cobrowseScreen(Self.self)
             .navigationTitle("Make Payment (path)")
             .navigationBarTitleDisplayMode(.inline)
-            .navigationDestination(for: CardDetailsRoute.self) { _ in
+            .cobrowseDestination(for: CardDetailsRoute.self) { _ in
                 PaymentDetailsView(amount: amount) { path.removeLast() }
             }
-            .navigationDestination(for: ExplainBillRoute.self) { _ in
+            .cobrowseDestination(for: ExplainBillRoute.self) { _ in
                 ExplainMyBillView()
             }
             .toolbar {

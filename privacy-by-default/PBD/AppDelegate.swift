@@ -16,8 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        HostingRootRedaction.install()
-
         let cobrowse = CobrowseIO.instance()
         cobrowse.license = "ste"
         cobrowse.delegate = redactionDelegate

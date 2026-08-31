@@ -11,9 +11,6 @@ import CobrowseSDK
 /// `NavigationStack` driven by boolean destinations, as a contrast with
 /// `MakePaymentPathView`'s typed path.
 ///
-/// Nothing here approves anything. This screen and every destination it pushes
-/// are hidden by default and revealed only by `Approvals.swift`.
-///
 /// The single `cobrowseRedacted()` below goes the other way: it hides the
 /// amount field *because* the screen around it is revealed.
 struct MakePaymentView: View {
@@ -60,12 +57,13 @@ struct MakePaymentView: View {
                     .listRowBackground(Color.clear)
                 }
             }
+            .cobrowseScreen(Self.self)
             .navigationTitle("Make Payment")
             .navigationBarTitleDisplayMode(.inline)
-            .navigationDestination(isPresented: $showingDetails) {
+            .cobrowseDestination(isPresented: $showingDetails) {
                 PaymentDetailsView(amount: amount) { dismiss() }
             }
-            .navigationDestination(isPresented: $showingExplainMyBill) {
+            .cobrowseDestination(isPresented: $showingExplainMyBill) {
                 ExplainMyBillView()
             }
             .toolbar {
