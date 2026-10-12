@@ -37,7 +37,7 @@ class FullDeviceConsentPromptViewController: UIViewController {
         guard let button = broadcastButton(in: pickerView)
                 else { return }
         
-        button.sendActions(for: .touchDown)
+        button.sendActions(for: .touchUpInside)
     }
     
     private func broadcastButton(in view: UIView) -> UIButton? {
