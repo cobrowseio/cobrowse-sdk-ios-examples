@@ -38,6 +38,7 @@ class ConsentPromptViewController: UIViewController {
         }
         
         if let terms, !terms.isEmpty {
+            termsLabel.isHidden = false
             termsLabel.attributedText = emphasisedTerms(terms)
         } else {
             termsLabel.isHidden = true
@@ -65,15 +66,14 @@ class ConsentPromptViewController: UIViewController {
 extension ConsentPromptViewController {
     
     private func emphasisedTerms(_ terms: String) -> NSAttributedString {
+        
         let text = NSMutableAttributedString(
             string: terms,
-            attributes: [
-                .font: termsLabel.font as Any,
-                .foregroundColor: termsLabel.textColor as Any
-            ]
+            attributes: [ .foregroundColor: termsLabel.textColor as Any ]
         )
         
         for phrase in ["Terms & Privacy Policy", "these terms"] {
+            
             guard let range = terms.range(of: phrase)
                 else { continue }
             
