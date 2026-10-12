@@ -20,6 +20,7 @@ class FullDeviceConsentPromptViewController: UIViewController {
         
         pickerView.showsMicrophoneButton = false
         pickerView.preferredExtension = "io.cobrowse.demo.broadcast-extension"
+        pickerView.accessibilityElementsHidden = true
         
         subscribeToSession()
     }
@@ -27,6 +28,31 @@ class FullDeviceConsentPromptViewController: UIViewController {
     @IBAction func denyButtonWasTapped(_ sender: Any) {
         cobrowseSession.current?.setFullDevice(.rejected)
         dismiss(animated: true)
+    }
+
+    @IBAction func allowButtonWasTapped(_ sender: Any) {
+        
+        // Find the broadcast button to trigger the picker from our
+        // custom `allow` button.
+        guard let button = broadcastButton(in: pickerView)
+                else { return }
+        
+        button.sendActions(for: .touchDown)
+    }
+    
+    private func broadcastButton(in view: UIView) -> UIButton? {
+        
+        if let button = view as? UIButton {
+            return button
+        }
+        
+        for subview in view.subviews {
+            if let found = broadcastButton(in: subview) {
+                return found
+            }
+        }
+        
+        return nil
     }
 }
 
@@ -46,66 +72,5 @@ extension FullDeviceConsentPromptViewController {
             dismiss(animated: true)
         }
         .store(in: &bag)
-    }
-}
-
-final class GlyphTintView: UIView {
-    
-    @IBOutlet weak var sourceView: UIView?
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        updateMask()
-    }
-    
-    private func updateMask() {
-        guard let sourceView, !bounds.isEmpty
-                else { return }
-        
-        guard let glyph = imageView(in: sourceView),
-              let image = glyph.image,
-              !glyph.bounds.isEmpty
-        else { return }
-        
-        let maskFrame = glyph.convert(glyph.bounds, to: self)
-        let maskView = mask as? UIImageView ?? UIImageView()
-        
-        if maskView.image !== image {
-            maskView.image = image
-            maskView.contentMode = glyph.contentMode
-        }
-        
-        if maskView.frame != maskFrame {
-            maskView.frame = maskFrame
-        }
-        
-        if mask !== maskView {
-            mask = maskView
-        }
-        
-        // The mask already has this image.
-        // Hide the original so the black shape does not sit under the color.
-        if glyph.alpha != 0 {
-            glyph.alpha = 0
-        }
-        
-        if isHidden {
-            isHidden = false
-        }
-    }
-    
-    private func imageView(in view: UIView) -> UIImageView? {
-        
-        if let imageView = view as? UIImageView, imageView.image != nil {
-            return imageView
-        }
-        
-        for subview in view.subviews {
-            if let found = imageView(in: subview) {
-                return found
-            }
-        }
-        
-        return nil
     }
 }
