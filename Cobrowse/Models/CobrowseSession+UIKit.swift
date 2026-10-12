@@ -57,7 +57,7 @@ extension CobrowseSession {
             consentPrompt.dismiss(animated: true)
         }
         
-        presentConsentAlert(consentPrompt)
+        UIWindow.present(consentPrompt)
     }
     
     func cobrowseHandleRemoteControlRequest(_ session: CBIOSession) {
@@ -81,7 +81,7 @@ extension CobrowseSession {
             consentPrompt.dismiss(animated: true)
         }
         
-        presentConsentAlert(consentPrompt)
+        UIWindow.present(consentPrompt)
     }
     
     func cobrowseHandleFullDeviceRequest(_ session: CBIOSession) {
@@ -91,13 +91,6 @@ extension CobrowseSession {
         guard let consentPrompt: ConsentPrompt = UIStoryboard.main.viewControllerWith(id: .fullDevicePrompt)
             else { return }
         
-        presentConsentAlert(consentPrompt)
-    }
-    
-    private func presentConsentAlert(_ consentPrompt: UIViewController) {
-        consentPrompt.isModalInPresentation = true
-        consentPrompt.modalPresentationStyle = .overFullScreen
-        consentPrompt.modalTransitionStyle = .crossDissolve
         UIWindow.present(consentPrompt)
     }
 }
