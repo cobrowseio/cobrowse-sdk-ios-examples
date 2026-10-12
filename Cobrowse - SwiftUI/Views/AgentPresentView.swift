@@ -14,6 +14,16 @@ struct AgentPresentView: View {
     @State var code: String?
     @State var shouldShake = false
     
+    private var presentingSymbolName: String {
+        if #available(iOS 27.0, *) {
+            "inset.filled.rectangle.and.person"
+        } else if #available(iOS 18.0, *) {
+            "inset.filled.rectangle.and.person.filled"
+        } else {
+            "rectangle.inset.filled.and.person.filled"
+        }
+    }
+    
     var body: some View {
             VStack(spacing: 16) {
                 if let session = cobrowseSession.current, session.isActive() {
@@ -21,7 +31,7 @@ struct AgentPresentView: View {
                         .font(.title2)
                         .foregroundStyle(Color.text)
                     
-                    Image(systemName: "rectangle.inset.filled.and.person.filled")
+                    Image(systemName: presentingSymbolName)
                         .font(.system(size: 120, weight: .thin))
                         .foregroundColor(Color.cbPrimary)
                     

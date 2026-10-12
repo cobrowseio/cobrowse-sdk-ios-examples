@@ -351,7 +351,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="120" id="fJq-8w-5Zh"/>
                                         </constraints>
-                                        <imageReference key="image" image="rectangle.inset.filled.and.person.filled" catalog="system" symbolScale="large"/>
+                                        <imageReference key="image" image="inset.filled.rectangle.and.person" catalog="system" symbolScale="large"/>
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="thin"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hHY-N5-Ksa">
@@ -1250,10 +1250,10 @@
     <resources>
         <image name="basket.fill" catalog="system" width="128" height="111"/>
         <image name="gearshape" catalog="system" width="128" height="128"/>
+        <image name="inset.filled.rectangle.and.person" catalog="system" width="128" height="92"/>
         <image name="person.crop.circle" catalog="system" width="128" height="128"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="128"/>
         <image name="rectangle.badge.xmark" catalog="system" width="128" height="100"/>
-        <image name="rectangle.inset.filled.and.person.filled" catalog="system" width="128" height="92"/>
         <image name="sterlingsign.square" catalog="system" width="128" height="119"/>
         <image name="xmark" catalog="system" width="128" height="118"/>
         <namedColor name="AlertBackground">
