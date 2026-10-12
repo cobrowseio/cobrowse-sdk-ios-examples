@@ -60,8 +60,8 @@ extension DeepLinker {
         let license = String(component)
         
         Task {
-            guard try await license.isKnown
-                else { return }
+            guard let known = try? await license.isKnown, known
+                    else { return }
             
             let cobrowse = CobrowseIO.instance()
             cobrowse.stop()

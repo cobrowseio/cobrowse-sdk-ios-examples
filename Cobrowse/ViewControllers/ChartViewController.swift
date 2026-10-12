@@ -118,22 +118,18 @@ extension ChartViewController {
                     
                     dismiss(animated: true) {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                            UIView.animate(withDuration: 0.25) { [weak self] in
-                                guard let self = self else { return }
-                                
-                                stackView.alpha = 1.0
+                            UIView.animate(withDuration: 0.25) {
+                                self.stackView.alpha = 1.0
                             }
                         }
                         
                         self.performSegue(to: .transactions)
                     }
                 } else {
-                    dismiss(animated: false) { [weak self] in
-                        guard let self = self else { return }
-                        
-                        performSegue(to: .signIn)
-                        stackView.alpha = 0.0
-                        profileButton.isHidden = true
+                    dismiss(animated: false) {
+                        self.performSegue(to: .signIn)
+                        self.stackView.alpha = 0.0
+                        self.profileButton.isHidden = true
                     }
                 }
             }

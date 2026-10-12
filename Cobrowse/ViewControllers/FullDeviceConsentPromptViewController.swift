@@ -20,6 +20,7 @@ class FullDeviceConsentPromptViewController: UIViewController {
         
         pickerView.showsMicrophoneButton = false
         pickerView.preferredExtension = "io.cobrowse.demo.broadcast-extension"
+        pickerView.accessibilityElementsHidden = true
         
         subscribeToSession()
     }
@@ -27,6 +28,31 @@ class FullDeviceConsentPromptViewController: UIViewController {
     @IBAction func denyButtonWasTapped(_ sender: Any) {
         cobrowseSession.current?.setFullDevice(.rejected)
         dismiss(animated: true)
+    }
+
+    @IBAction func allowButtonWasTapped(_ sender: Any) {
+        
+        // Find the broadcast button to trigger the picker from our
+        // custom `allow` button.
+        guard let button = broadcastButton(in: pickerView)
+                else { return }
+        
+        button.sendActions(for: .touchUpInside)
+    }
+    
+    private func broadcastButton(in view: UIView) -> UIButton? {
+        
+        if let button = view as? UIButton {
+            return button
+        }
+        
+        for subview in view.subviews {
+            if let found = broadcastButton(in: subview) {
+                return found
+            }
+        }
+        
+        return nil
     }
 }
 

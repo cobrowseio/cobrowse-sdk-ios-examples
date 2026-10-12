@@ -27,6 +27,15 @@ class AgentPresentViewController: UIViewController {
         imageView.isHidden = true
         sessionButton.isHidden = true
         
+        // The storyboard is set for iOS 27 so only handle if OS is less
+        if #unavailable(iOS 27.0) {
+            if #available(iOS 18.0, *) {
+                imageView.image = UIImage(systemName: "inset.filled.rectangle.and.person.filled")
+            } else {
+                imageView.image = UIImage(systemName: "rectangle.inset.filled.and.person.filled")
+            }
+        }
+        
         setupCodeInput()
     }
     
